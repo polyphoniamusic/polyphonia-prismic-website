@@ -1,0 +1,76 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Duis elit officia eu. Sint mollit labore dolor pariatur fugiat amet exercitation sit ad mollit cillum exercitation eiusmod consectetur. Nisi reprehenderit consequat non ut eiusmod aliqua occaecat velit esse amet."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"date",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Date",
+							"value": "2014-02-21"
+						}
+					],
+					[
+						"artist_name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "place",
+							"type": "Text"
+						}
+					],
+					[
+						"place_name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "parts",
+							"type": "Text"
+						}
+					],
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://slicemachine.dev"
+							}
+						}
+					],
+					[
+						"city_country",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "location",
+							"type": "Text"
+						}
+					],
+					[
+						"tba",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "powder",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,154 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Velit elit cillum fugiat officia. Aliqua laboris qui cillum culpa occaecat proident cupidatat et id sint velit velit. Dolor Lorem consectetur ut sunt sit minim ipsum aliqua aute reprehenderit nostrud minim."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://google.com"
+							}
+						}
+					],
+					[
+						"title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Esse aute adipisicing ex elit non tempor ea. Amet irure exercitation amet ad excepteur aute nostrud nulla ea deserunt est cillum. Ea commodo labore minim."
+									}
+								}
+							]
+						}
+					],
+					[
+						"label",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "location",
+							"type": "Text"
+						}
+					],
+					[
+						"artistname",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Sunt labore pariatur ea eu aute ut nisi proident est occaecat ad veniam. Aliquip et duis ullamco consequat cupidatat adipisicing Lorem minim velit cillum eiusmod dolore."
+									}
+								}
+							]
+						}
+					],
+					[
+						"cover",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+								"width": 12288,
+								"height": 16384
+							},
+							"url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+							"width": 12288,
+							"height": 16384,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"year",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Magna fugiat non voluptate."
+									}
+								}
+							]
+						}
+					],
+					[
+						"single_release",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Elit voluptate quis anim voluptate adipisicing qui aliquip irure voluptate."
+									}
+								}
+							]
+						}
+					],
+					[
+						"ep_release",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Do et eu nisi veniam et quis magna deserunt. Amet nulla reprehenderit laborum laborum et."
+									}
+								}
+							]
+						}
+					],
+					[
+						"album_release",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Culpa exercitation commodo adipisicing Lorem id reprehenderit velit Lorem aute est culpa do et magna."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

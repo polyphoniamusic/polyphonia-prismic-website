@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Magna fugiat sit magna ipsum occaecat commodo veniam in ex anim sit amet et dolore. Magna nostrud eu excepteur sunt laboris dolor. Incididunt nostrud officia quis dolore elit consectetur sint velit."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
