@@ -114,14 +114,14 @@ export default function RootLayout({
                 transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}>
                   <Loader/>
               </motion.div>
-              <motion.div
+              {/*<motion.div
                 className="slide-out"
                 initial={{translateY: 100 + 'svh'}}
                 animate={{translateY: -100 + 'svh'}}
                 exit={{translateY: -100 + 'svh'}}
                 transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}>
                   <Loader/>
-              </motion.div>
+              </motion.div>*/}
             </motion.div>
           </AnimatePresence>
         </body>

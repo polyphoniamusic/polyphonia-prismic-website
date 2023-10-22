@@ -169,7 +169,7 @@ li {
     left: 0;
     width: 100%;
     height: 100svh;
-    background: var(--color-tertiary);
+    background: var(--color-background);
     transform-origin: bottom;
     z-index: 999999999;
     display: flex;
@@ -183,7 +183,7 @@ li {
     left: 0;
     width: 100%;
     height: 100svh;
-    background: var(--color-quaternary);
+    background: var(--color-background);
     transform-origin: top;
     z-index: 999999999;
     display: flex;
