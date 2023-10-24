@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import type { Metadata, ResolvingMetadata } from 'next'
 import './css/globals.css'
 import clsx from 'clsx'
+import 'styled-jsx/style';
 
 // Import Priscmic Data Client
 import { createClient } from '@/prismicio'
@@ -16,7 +17,6 @@ import Loader from '@/app/components/Loader';
 
 //import { SmoothScrollProvider } from '@/app/components/contexts/SmoothScroll.context'
 //import { initLocomotiveScroll } from '@/app/components/initLocomotiveScroll';
-
 
 // Import UX Components
 import CustomCursor from "@/app/components/CustomCursor";

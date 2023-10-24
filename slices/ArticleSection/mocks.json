@@ -1,0 +1,90 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "ill",
+				"type": "Text"
+			},
+			"date": {
+				"__TYPE__": "FieldContent",
+				"type": "Date",
+				"value": "2017-03-16"
+			},
+			"author": {
+				"__TYPE__": "FieldContent",
+				"value": "continent",
+				"type": "Text"
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+					"width": 3456,
+					"height": 3456
+				},
+				"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+				"width": 3456,
+				"height": 3456,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"text_content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Id duis qui nisi eiusmod Lorem fugiat reprehenderit quis enim adipisicing duis nostrud. Ipsum Lorem officia mollit in fugiat."
+						}
+					}
+				]
+			},
+			"category": {
+				"__TYPE__": "FieldContent",
+				"value": "orbit",
+				"type": "Text"
+			},
+			"sub_category": {
+				"__TYPE__": "FieldContent",
+				"value": "pack",
+				"type": "Text"
+			},
+			"sub_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "private",
+				"type": "Text"
+			},
+			"duration": {
+				"__TYPE__": "FieldContent",
+				"value": "18",
+				"type": "Number"
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "at",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

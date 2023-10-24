@@ -38,6 +38,29 @@ const Artists = ({ slice }: ArtistsProps): JSX.Element => {
             </div>
 
             <div>
+              {/* Artists Names (repeatable) */}
+              {slice.items.map(({name, pagelink}) => (  
+                <>
+                  <PrismicNextLink field={pagelink} className="showroll-name">
+                    {name}
+                  </PrismicNextLink>
+                </>  
+              ))}
+            </div>
+
+            <div>
+              {/* Artists Names (repeatable) */}
+              {slice.items.map(({name, pagelink}) => (  
+                <>
+                  <PrismicNextLink field={pagelink} className="showroll-name">
+                    {name}
+                  </PrismicNextLink>
+                </>  
+              ))}
+            </div>
+
+            <div>
+              {/* Artists Names (repeatable) */}
               {slice.items.map(({name, pagelink}) => (  
                 <>
                   <PrismicNextLink field={pagelink} className="showroll-name">

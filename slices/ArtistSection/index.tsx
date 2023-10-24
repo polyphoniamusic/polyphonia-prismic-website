@@ -30,16 +30,18 @@ const ArtistSection = ({ slice }: ArtistSectionProps): JSX.Element => {
         </div>
         <div className="artist-information-block">
           <div className="artist-information">
-            <PrismicRichText field={slice.primary.heading} components={{
-              paragraph: ({children}) =>(
-                <h1 className="artist-heading">{children}</h1>
-              )
-            }}/>
-            <PrismicRichText field={slice.primary.category} components={{
-              paragraph: ({children}) =>(
-                <h2 className="artist-category">{children}</h2>
-              )
-            }}/>
+            <div className="artist-information-main">
+              <PrismicRichText field={slice.primary.heading} components={{
+                paragraph: ({children}) =>(
+                  <h1 className="artist-heading">{children}</h1>
+                )
+              }}/>
+              <PrismicRichText field={slice.primary.category} components={{
+                paragraph: ({children}) =>(
+                  <h2 className="artist-category">{children}</h2>
+                )
+              }}/>
+            </div>
             <PrismicRichText field={slice.primary.biography} components={{
               paragraph: ({children}) =>(
                 <p className="artist-biography">{children}</p>

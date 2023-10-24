@@ -17,11 +17,7 @@ const Newsletter = ({ slice }: NewsletterProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <div className="newsletter-container">
-        <PrismicRichText field={slice.primary.heading} components={{
-          paragraph: ({children}) =>(
-            <h1 className="newsletter-heading">{children}</h1>
-          )
-        }}/>
+        <h1 className="newsletter-heading">Get the latest from Polyphonia</h1>
         <div className="newsletter-block">
           <input type="email" className="newsletter-input" placeholder="Your email"></input>
           <button className="button-cta button-cta-black">Subscribe</button>

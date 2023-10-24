@@ -49,15 +49,6 @@
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "page_link": {
-          "type": "Link",
-          "config": {
-            "label": "Page Link",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "select": null
-          }
-        },
         "label": {
           "type": "StructuredText",
           "config": {
@@ -65,6 +56,16 @@
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "page_link": {
+          "type": "Link",
+          "config": {
+            "label": "Page Link",
+            "select": "document",
+            "customtypes": [
+              "artistpage"
+            ]
           }
         }
       }

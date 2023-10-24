@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type ArticlepageDocumentDataSlicesSlice = BannerSlice;
+type ArticlepageDocumentDataSlicesSlice = ArticleSectionSlice | NewsletterSlice;
 
 /**
  * Content for ArticlePage documents
@@ -594,6 +594,151 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
+ * Primary content in *ArticleSection → Primary*
+ */
+export interface ArticleSectionSliceDefaultPrimary {
+  /**
+   * Heading field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Sub Heading field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.sub_heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_heading: prismic.KeyTextField;
+
+  /**
+   * Author field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.author
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  author: prismic.KeyTextField;
+
+  /**
+   * Date field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.date
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField;
+
+  /**
+   * Category field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.category
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  category: prismic.KeyTextField;
+
+  /**
+   * Sub Category field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.sub_category
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_category: prismic.KeyTextField;
+
+  /**
+   * Duration field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.duration
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  duration: prismic.NumberField;
+
+  /**
+   * Image field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Text Content field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.text_content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text_content: prismic.RichTextField;
+
+  /**
+   * Label field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Link field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Default variation for ArticleSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ArticleSectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ArticleSectionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ArticleSection*
+ */
+type ArticleSectionSliceVariation = ArticleSectionSliceDefault;
+
+/**
+ * ArticleSection Shared Slice
+ *
+ * - **API ID**: `article_section`
+ * - **Description**: ArticleSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ArticleSectionSlice = prismic.SharedSlice<
+  "article_section",
+  ArticleSectionSliceVariation
+>;
+
+/**
  * Primary content in *ArtistSection → Primary*
  */
 export interface ArtistSectionSliceDefaultPrimary {
@@ -853,16 +998,6 @@ export interface ArtistsSectionSliceDefaultItem {
   artist_name: prismic.RichTextField;
 
   /**
-   * Page Link field in *ArtistsSection → Items*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: artists_section.items[].page_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  page_link: prismic.LinkField;
-
-  /**
    * Label field in *ArtistsSection → Items*
    *
    * - **Field Type**: Rich Text
@@ -871,6 +1006,16 @@ export interface ArtistsSectionSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   label: prismic.RichTextField;
+
+  /**
+   * Page Link field in *ArtistsSection → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: artists_section.items[].page_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  page_link: prismic.ContentRelationshipField<"artistpage">;
 }
 
 /**
@@ -991,6 +1136,51 @@ export interface BlogSectionSliceDefaultPrimary {
 }
 
 /**
+ * Primary content in *BlogSection → Items*
+ */
+export interface BlogSectionSliceDefaultItem {
+  /**
+   * Title field in *BlogSection → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_section.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Date field in *BlogSection → Items*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_section.items[].date
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField;
+
+  /**
+   * Image field in *BlogSection → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_section.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Link field in *BlogSection → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_section.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.ContentRelationshipField<"articlepage">;
+}
+
+/**
  * Default variation for BlogSection Slice
  *
  * - **API ID**: `default`
@@ -1000,7 +1190,7 @@ export interface BlogSectionSliceDefaultPrimary {
 export type BlogSectionSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<BlogSectionSliceDefaultPrimary>,
-  never
+  Simplify<BlogSectionSliceDefaultItem>
 >;
 
 /**
@@ -1488,31 +1678,6 @@ export type LabelSectionSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Newsletter → Primary*
- */
-export interface NewsletterSliceDefaultPrimary {
-  /**
-   * Heading field in *Newsletter → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: newsletter.primary.heading
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  heading: prismic.RichTextField;
-
-  /**
-   * Label field in *Newsletter → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: newsletter.primary.label
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  label: prismic.RichTextField;
-}
-
-/**
  * Default variation for Newsletter Slice
  *
  * - **API ID**: `default`
@@ -1521,7 +1686,7 @@ export interface NewsletterSliceDefaultPrimary {
  */
 export type NewsletterSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Simplify<NewsletterSliceDefaultPrimary>,
+  Record<string, never>,
   never
 >;
 
@@ -2022,6 +2187,10 @@ declare module "@prismicio/client" {
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
+      ArticleSectionSlice,
+      ArticleSectionSliceDefaultPrimary,
+      ArticleSectionSliceVariation,
+      ArticleSectionSliceDefault,
       ArtistSectionSlice,
       ArtistSectionSliceDefaultPrimary,
       ArtistSectionSliceDefaultItem,
@@ -2043,6 +2212,7 @@ declare module "@prismicio/client" {
       BannerSliceDefault,
       BlogSectionSlice,
       BlogSectionSliceDefaultPrimary,
+      BlogSectionSliceDefaultItem,
       BlogSectionSliceVariation,
       BlogSectionSliceDefault,
       BookingSectionSlice,
@@ -2069,7 +2239,6 @@ declare module "@prismicio/client" {
       LabelSectionSliceVariation,
       LabelSectionSliceDefault,
       NewsletterSlice,
-      NewsletterSliceDefaultPrimary,
       NewsletterSliceVariation,
       NewsletterSliceDefault,
       PrivacySectionSlice,

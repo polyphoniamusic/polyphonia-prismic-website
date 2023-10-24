@@ -29,8 +29,6 @@ const BookingSection = ({ slice }: BookingSectionProps): JSX.Element => {
     return 0;
   });
   
-  
-
   return (
     <section className="booking" id="booking" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
       <div className="booking-container">
