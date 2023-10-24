@@ -67,7 +67,17 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <Link href="#showroll" className="hero-icon">
           <PrismicNextImage field={slice.primary.icon}/>
         </Link>
-        <video ref={videoRef} className="hero-video" autoPlay muted loop src="/assets/videos/polyphonia-website-hero-video.mp4"></video>
+        {/*<video ref={videoRef} className="hero-video" autoPlay muted loop src="/assets/videos/polyphonia-website-hero-video.mp4"></video>*/}
+        <video
+          ref={videoRef}
+          className="hero-video"
+          autoPlay
+          muted
+          playsInline
+          loop
+          preload="auto"
+          src="/assets/videos/polyphonia-website-hero-video.mp4"
+        ></video>
       </div>
     </section>
   );

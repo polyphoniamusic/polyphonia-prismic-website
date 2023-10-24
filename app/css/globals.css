@@ -146,7 +146,7 @@ li {
 }
   
 /* We need to remove this custom cursor in mobile devices */
-/*@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .cursor {
         width: 0;
         height: 0;
@@ -154,7 +154,7 @@ li {
         opacity 0.2s ease-in-out;
         display: none;
     }
-}*/
+}
 
 .cursor.pointer {
     /*opacity: 0 !important;*/
@@ -301,7 +301,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-    mix-blend-mode: difference;
+    /*mix-blend-mode: difference;*/
     pointer-events: auto;
 }
 
@@ -311,6 +311,7 @@ header {
     margin: auto;
     display: flex;
     align-items: center;
+    mix-blend-mode: difference;
 }
 
 .header-controls {
@@ -455,6 +456,21 @@ header {
 
 .header-nav-socials img {
     width: 1.75rem;
+}
+
+.header-nav-mobile {
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    animation: opacityEntry 1s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.header-mobile-close-button {
+    position: relative;
+    color: white;
+    z-index: 100;
 }
 
 /* ---------- HERO BANNER ---------- */
@@ -1225,7 +1241,7 @@ header {
 
 .artist-information {
     padding: var(--container-padding);
-    filter: drop-shadow(0px 0px 50px #0000007d);
+    filter: drop-shadow(0px 0px 50px #0000002b);
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -2264,6 +2280,9 @@ footer {
         /*animation: fadeOutAndHide 0.2s ease-in-out forwards;*/
         display: none;
     }   
+    .header-nav-mobile {
+        display: flex;
+    }
     /* HERO */
     .hero {
         margin-top: calc(-56px - var(--container-padding));
@@ -2441,7 +2460,9 @@ footer {
     .showroll-name-block div {
     
     }
-    .showroll-name-block div:last-child {
+    .showroll-name-block div:nth-child(2),
+    .showroll-name-block div:nth-child(3),
+    .showroll-name-block div:nth-child(4) {
         display: none;
     }
     .showroll-name {
@@ -2617,3 +2638,12 @@ footer {
         line-height: 10vw;
     }
   }
+
+@media only screen and (max-width: 360px) {
+    .booking-grid-line {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: start;
+    }
+}
