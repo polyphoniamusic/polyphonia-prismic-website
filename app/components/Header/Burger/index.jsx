@@ -1,8 +1,8 @@
-//'use client';
+'use client';
 
 export default function ({openMenu}) {
 
     return (
-        <button onClick={() => {openMenu()}}>Mobile Menu</button>
+        <button className="header" onClick={() => {openMenu()}}>Mobile Menu</button>
     )
 }

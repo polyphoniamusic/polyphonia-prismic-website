@@ -1,12 +1,13 @@
 import styles from './style.module.scss'
 import { motion } from 'framer-motion';
-import { mountAnim, rotateX } from '@/app/components/Header/anim';
+import { mountAnim, rotateX } from '../anim';
+import Image from 'next/image';
 import { useRef } from 'react';
 import gsap from 'gsap';
 import Link from 'next/link';
 
 export default function link({data, index}) {
-    const { title, link } = data;
+    const { title, link, newtab } = data;
     const outer = useRef(null);
     const inner = useRef(null);
 
@@ -44,22 +45,12 @@ export default function link({data, index}) {
           {...mountAnim}
           custom={index} 
           className={styles.el}>
-            <Link href={link}>{title}</Link>
-            {/*<div ref={outer} className={styles.outer}>
-                <div ref={inner} className={styles.inner}>
-
-                    {
-                        [...Array(2)].map( (_, index) => {
-                        return <div key={index} className={styles.container}>
-                            <div className={styles.imageContainer}></div>
-                            <div className={styles.imageContainer}></div>
-                        </div>
-                        })
-                    }
-                    
-                </div>
-            </div>*/}
+            <Link href={link} target={newtab}>{title}<img className="arrow" src="/assets/images/icons/arrow-icon-white.svg"/></Link>
+            <div ref={outer} className={styles.outer}>
+                <div ref={inner} className={styles.inner}></div>
+            </div>
 
         </motion.div>
+        
     )
 }

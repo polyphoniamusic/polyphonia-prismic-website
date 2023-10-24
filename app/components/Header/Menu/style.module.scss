@@ -1,11 +1,13 @@
 .menu{
     position: fixed;
     display: flex;
-    z-index: 3;
+    z-index: 10;
     height: 100%;
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
+    top: 0;
+    left: 0;
     .header{
         display: flex;
         justify-content: flex-end;
@@ -53,8 +55,8 @@
         a, p{
             color: white;
             text-transform: uppercase;
-            font-size: 12vw;
-            line-height: 14vw;
+            font-size: 5rem;
+            line-height: 6rem;
             font-weight: 400;
             margin: 0px;
             text-decoration: none;

@@ -295,14 +295,18 @@ li {
 }
 
 /* ---------- HEADER ---------- */
-header {
+header, .header {
     color: var(--color-primary);
     width: 100%;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 1;
     /*mix-blend-mode: difference;*/
     pointer-events: auto;
+}
+
+.header-line {
+    width: 100%;
 }
 
 .header-container {
@@ -310,6 +314,15 @@ header {
     padding-bottom: 0;
     margin: auto;
     display: flex;
+    align-items: center;
+    mix-blend-mode: difference;
+}
+
+.header-container-mobile {
+    padding: var(--container-padding);
+    padding-bottom: 0;
+    margin: auto;
+    display: none;
     align-items: center;
     mix-blend-mode: difference;
 }
@@ -459,12 +472,12 @@ header {
 }
 
 .header-nav-mobile {
-    display: none;
     justify-content: space-between;
     width: 100%;
     animation: opacityEntry 1s ease-in-out forwards;
     animation-delay: 1s;
     opacity: 0;
+    display: inline-flex;
 }
 
 .header-mobile-close-button {
@@ -504,7 +517,7 @@ header {
 .hero-logo {
     width: calc(100% - 5rem);
     max-width: 1250px;
-    z-index: 1;
+    z-index: 0;
     /*mix-blend-mode: difference;
     filter: grayscale(1) contrast(0.1) brightness(10) blur(1px);*/
     /*transform: translateY(100%);
@@ -1060,7 +1073,7 @@ header {
     flex-direction: column;
     align-items: center;
     opacity: 0;
-    z-index: 1;
+    z-index: 0;
 }
 
 .artists-block-image-text {
@@ -2276,11 +2289,11 @@ footer {
 
 @media only screen and (max-width: 1050px) {
     /* HEADER */
-    .header-nav {
+    .header-container {
         /*animation: fadeOutAndHide 0.2s ease-in-out forwards;*/
         display: none;
     }   
-    .header-nav-mobile {
+    .header-container-mobile {
         display: flex;
     }
     /* HERO */

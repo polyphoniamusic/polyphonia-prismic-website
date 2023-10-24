@@ -12,6 +12,7 @@ import { createClient } from '@/prismicio'
 
 // Import components
 import Header from '@/app/components/Header'
+import Header2 from '@/app/components/Header/index'
 import Footer from '@/app/components/Footer'
 import Loader from '@/app/components/Loader';
 
@@ -101,7 +102,7 @@ export default function RootLayout({
               {/* Cursor & Smooth scroll effect with Locomotive Scroll */}
               <CustomCursor/>
               
-              <Header/>
+              <Header2/>
               {children}
               <Footer/>
 

@@ -15,10 +15,10 @@ import { PrismicNextLink, PrismicNextImage  } from '@prismicio/next';
 export default async function Header({}) {
     
     const client = createClient();
-    
-    const [menuIsOpen, setMenuIsOpen] = useState(false);
   
     const settings = await client.getSingle("settings");
+    
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
 
     return (
             <header id="home">

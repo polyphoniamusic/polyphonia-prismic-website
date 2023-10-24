@@ -7,21 +7,29 @@ import { useState } from 'react';
 const menu = [
   {
     title: "Artists",
+    link: '/artists',
   },
   {
     title: "Tour",
+    link: '/tour',
   },
   {
     title: "Studio",
+    link: 'https://airval-studio.com',
+    newtab: "_blank",
   },
   {
     title: "Blog",
+    link: '/blog',
   },
   {
     title: "Store",
+    link: 'https://store.polyphoniamusic.com',
+    newtab: "_blank",
   },
   {
     title: "Contact",
+    link: '/contact',
   }
 ]
 
@@ -35,7 +43,7 @@ export default function index({closeMenu}) {
         <div className={styles.body}>
           {
             menu.map( (el, index) => {
-              return <Link data={el} index={index} key={index}/>
+              return <button className="header-line" onClick={() => {closeMenu()}}><Link data={el} index={index} key={index}/></button>
             })
           }
         </div>
