@@ -53,6 +53,7 @@ const menuSocials = [
       alt: 'Spotify Icon',
       icon: SpotifyIcon,
       name: 'SF',
+      newtab: "_blank",
   },
   {
       //title: "Instagram",
@@ -60,6 +61,7 @@ const menuSocials = [
       alt: 'Instagram Icon',
       icon: InstagramIcon,
       name: 'IG',
+      newtab: "_blank",
   },
   {
       //title: "LinkedIn",
@@ -67,6 +69,7 @@ const menuSocials = [
       alt: 'LinkedIn Icon',
       icon: LinkedinIcon,
       name: 'LI',
+      newtab: "_blank",
   },
 ]
 

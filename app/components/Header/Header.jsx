@@ -51,18 +51,21 @@ const menuSocials = [
         link: 'https://open.spotify.com/user/315n6x5keqsyp2xw7yqlqdoirwzm',
         alt: 'Spotify Icon',
         icon: SpotifyIcon,
+        newtab: "_blank",
     },
     {
         //title: "Instagram",
         link: 'https://www.instagram.com/polyphoniamusic',
         alt: 'Instagram Icon',
         icon: InstagramIcon,
+        newtab: "_blank",
     },
     {
         //title: "LinkedIn",
         link: 'https://www.linkedin.com/company/polyphoniamusic',
         alt: 'LinkedIn Icon',
         icon: LinkedinIcon,
+        newtab: "_blank",
     },
 ]
 
