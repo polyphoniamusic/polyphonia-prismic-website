@@ -223,6 +223,7 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | BrandAssetsSectionSlice
   | NewsletterSlice
   | ArtistsSectionSlice
   | BannerSlice
@@ -1321,6 +1322,51 @@ export type BookingSectionSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *BrandAssetsSection → Primary*
+ */
+export interface BrandAssetsSectionSliceDefaultPrimary {
+  /**
+   * Heading field in *BrandAssetsSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: brand_assets_section.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+}
+
+/**
+ * Default variation for BrandAssetsSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BrandAssetsSectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<BrandAssetsSectionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *BrandAssetsSection*
+ */
+type BrandAssetsSectionSliceVariation = BrandAssetsSectionSliceDefault;
+
+/**
+ * BrandAssetsSection Shared Slice
+ *
+ * - **API ID**: `brand_assets_section`
+ * - **Description**: BrandAssetsSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BrandAssetsSectionSlice = prismic.SharedSlice<
+  "brand_assets_section",
+  BrandAssetsSectionSliceVariation
+>;
+
+/**
  * Primary content in *ContactSection → Primary*
  */
 export interface ContactSectionSliceDefaultPrimary {
@@ -2220,6 +2266,10 @@ declare module "@prismicio/client" {
       BookingSectionSliceDefaultItem,
       BookingSectionSliceVariation,
       BookingSectionSliceDefault,
+      BrandAssetsSectionSlice,
+      BrandAssetsSectionSliceDefaultPrimary,
+      BrandAssetsSectionSliceVariation,
+      BrandAssetsSectionSliceDefault,
       ContactSectionSlice,
       ContactSectionSliceDefaultPrimary,
       ContactSectionSliceDefaultItem,

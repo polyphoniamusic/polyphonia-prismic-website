@@ -8,8 +8,8 @@ import Image from 'next/image';
 import Link from './Menu/link';
 
 // Import Priscmic Data Client
-//import { createClient } from '@/prismicio';
-//import { PrismicNextLink, PrismicNextImage  } from '@prismicio/next';
+import { createClient } from '@/prismicio';
+import { PrismicNextLink, PrismicNextImage  } from '@prismicio/next';
 
 import SiteIcon from '@/public/assets/images/icons/polyphonia-icon-white.svg';
 import SpotifyIcon from '@/public/assets/images/icons/socials/spotify-icon-white.svg';
@@ -105,7 +105,6 @@ export default function Header2() {
                         <Image src={SiteIcon} className="site-logo"/>
                     </a>
                 </nav>
-                <div>
                     <Burger openMenu={() => {setMenuIsOpen(true)}}/>
                     <AnimatePresence mode="wait">
                         {
@@ -115,7 +114,6 @@ export default function Header2() {
                             </>
                         }
                     </AnimatePresence>
-                </div>
             </div>
         </header>
     )

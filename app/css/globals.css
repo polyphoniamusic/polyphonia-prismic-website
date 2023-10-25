@@ -294,6 +294,18 @@ li {
     margin-top: 1rem;
 }
 
+.arrow {
+    opacity: 1;
+    transform: translateY(60px) rotate(45deg);
+    transition: 0.2s all ease-in-out;
+    transition-delay: 0s;
+    transition-delay: 0.15s;
+    margin-left: 0.5rem;
+    float: right;
+    height: 1.25rem;
+    /*filter: drop-shadow(0px 50px 0px var(--color-primary));*/
+}
+
 /* ---------- HEADER ---------- */
 header, .header {
     color: var(--color-primary);
@@ -307,6 +319,36 @@ header, .header {
 
 .header-line {
     width: 100%;
+}
+
+.header-line div a {
+    padding-left: 1rem;
+    transition: all .15s ease-in-out;
+}
+
+.header-line div:hover a {
+    color: var(--color-background);
+}
+
+.header-line > div > a > img {
+    opacity: 0;
+}
+
+.header-line div:hover .arrow {
+    display: flex;
+    opacity: 1;
+    transform: translateY(2vw) rotate(45deg);
+    filter: invert(1);
+}
+
+.header-line-socials button a {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5rem;
+    border: 1px solid white;
+    font-size: 2rem !important;
 }
 
 .header-container {
@@ -398,7 +440,7 @@ header, .header {
     margin-left: 0;
 }
 
-.header-nav-button > a {
+.header-nav-button > div a {
     text-shadow: 0 50px var(--color-primary);
     padding-top: 50px;
     padding-bottom: 50px;
@@ -409,30 +451,18 @@ header, .header {
     text-decoration: none;
   }
   
-.header-nav-button > a:hover {
+.header-nav-button > div a:hover {
     margin-top: -50px;
     text-shadow: 0 50px var(--color-primary);
 }
 
-.header-nav-button > a:hover .header {
+.header-nav-button > div a:hover .header {
     mix-blend-mode: normal !important;
 }
 
-.header-nav-button a {
+.header-nav-button div a {
     max-width: max-content;
     display: flex;
-}
-
-.arrow {
-    opacity: 1;
-    transform: translateY(60px) rotate(45deg);
-    transition: 0.2s all ease-in-out;
-    transition-delay: 0s;
-    transition-delay: 0.15s;
-    margin-left: 0.5rem;
-    float: right;
-    height: 1.25rem;
-    /*filter: drop-shadow(0px 50px 0px var(--color-primary));*/
 }
 
 .header-nav-button:hover .arrow {
@@ -447,7 +477,7 @@ header, .header {
     margin-left: 0;
 }
 
-.header-nav-link > a {
+.header-nav-link > div a {
     filter: drop-shadow(0px 50px 0px var(--color-primary));
     padding-top: 50px;
     padding-bottom: 50px;
@@ -458,12 +488,12 @@ header, .header {
     text-decoration: none;
   }
   
-.header-nav-link > a:hover {
+.header-nav-link > div a:hover {
     margin-top: -50px;
     text-shadow: 0 50px var(--color-primary);
 }
 
-.header-nav-link > a:hover .header {
+.header-nav-link > div a:hover .header {
     mix-blend-mode: unset;
 }
 
@@ -480,10 +510,22 @@ header, .header {
     display: inline-flex;
 }
 
+.header-nav-mobile-button {
+    font-size: 2rem;
+    font-family: var(--font-space-grotesk);
+    line-height: initial;
+}
+
 .header-mobile-close-button {
     position: relative;
     color: white;
     z-index: 100;
+}
+
+.header-mobile-socials {
+    display: inline-flex;
+    justify-content: start;
+    gap: 10px;
 }
 
 /* ---------- HERO BANNER ---------- */
@@ -2251,6 +2293,35 @@ footer {
     opacity: 1;
 }
 
+/* ---------- LABEL ---------- */
+.brandassets {
+    color: var(--color-background);
+    background: var(--color-background);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.brandassets-container {
+    max-width: var(--container-max-width);
+    padding: var(--section-padding) var(--container-padding);
+    color: var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+}
+
+.brandassets-heading {
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    font-family: var(--font-space-grotesk);
+}
+
 /* ---------- BREAK POINTS / MEDIA QUERIES ---------- */
 @media only screen and (max-width: 1450px) {
     /*.spotlight-button {
@@ -2295,6 +2366,16 @@ footer {
     }   
     .header-container-mobile {
         display: flex;
+    }
+    .header-nav-button,
+    .header-nav-button > div a  {
+        all: unset;
+    }
+    .arrow {
+        display: none;
+    }
+    .header-nav-button div a:hover {
+        all: unset;
     }
     /* HERO */
     .hero {
@@ -2530,6 +2611,14 @@ footer {
     }
     .hero {
         margin-top: calc(-44px - var(--container-padding));
+    }
+    /* HEADER */
+    .header-line div a {
+        font-size: 15vw !important;
+        line-height: 18vw !important;
+    }
+    .header-line div:hover .arrow {
+        transform: translateY(3vw) rotate(45deg);
     }
     /* SPOTLIGHT */
     .spotlight-infos {

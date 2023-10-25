@@ -22,27 +22,28 @@
 
             &:hover{
                 path{
-                    stroke: #c65cff;
+                    stroke: #24FFB8;
                 }
             }
         }
     }
     .body{
-        position: absolute;
+        /*position: absolute;
         left: 50%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
-        width: 100%;
+        width: 100%;*/
         .el{
-            border-top: 1px solid white;
+            /*border-top: 1px solid white;*/
             display: flex;
-            justify-content: center;
+            /*justify-content: center;*/
+            justify-content: start;
             cursor: pointer;
             perspective: 80vw;
             transform-origin: top;
-            &:last-of-type{
+            /*&:last-of-type{
                 border-bottom: 1px solid white;
-            }
+            }*/
             &:hover{
                 .outer{
                     .container{
@@ -69,8 +70,10 @@
             overflow: hidden;
             pointer-events: none;
             will-change: top;
+            /*z-index: 1;*/
+            
             .inner{
-                background-color: #c65cff;
+                background-color: #24FFB8;
                 position: absolute;
                 white-space: nowrap;
                 height: 100%;
@@ -113,7 +116,7 @@
                 }
             }
             .background{
-                background-color: #c65cff;
+                background-color: #24FFB8;
                 position: absolute;
                 height: 100%;
                 width: 100%;

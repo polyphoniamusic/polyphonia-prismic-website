@@ -7,7 +7,7 @@ import gsap from 'gsap';
 import Link from 'next/link';
 
 export default function link({data, index}) {
-    const { title, link, newtab, icon } = data;
+    const { title, link, newtab, icon, name, description } = data;
     const outer = useRef(null);
     const inner = useRef(null);
 
@@ -39,27 +39,42 @@ export default function link({data, index}) {
 
     return (
         <motion.div 
-          onMouseEnter={ (e) => {manageMouseEnter(e)}} 
-          onMouseLeave={(e) => {manageMouseLeave(e)}} 
-          variants={rotateX} 
-          {...mountAnim}
-          custom={index} 
-          className={styles.el}>
+            onMouseEnter={ (e) => {manageMouseEnter(e)}} 
+            onMouseLeave={(e) => {manageMouseLeave(e)}} 
+            variants={rotateX} 
+            {...mountAnim}
+            custom={index} 
+            className={styles.el}>
             {title ? 
-                (<li className="header-nav-button">
+                (
                     <Link href={link} target={newtab}>
                         {title}
                         <Image width="30" height="30" className="arrow" src="/assets/images/icons/arrow-icon-white.svg"/>
                     </Link>
-                </li>) : (
-                <li className="header-nav-link">
-                    <Link href={link} target={newtab}>
-                        <Image width="30" height="30" src={icon}/>
-                    </Link>
-                </li>)
+                ) : (
+                    <div>
+                    {name ? (
+                        <Link href={link} target={newtab}>{name}</Link>
+                            ) : (
+                            <Link href={link} target={newtab}>
+                                <Image width="30" height="30" src={icon}/>
+                            </Link>
+                        )
+                    }
+                    </div>
+                )
             }
             <div ref={outer} className={styles.outer}>
-                <div ref={inner} className={styles.inner}></div>
+                <div ref={inner} className={styles.inner}>
+                {/*{
+                        [...Array(2)].map( (_, index) => {
+                        return <div key={index} className={styles.container}>
+                            <p>{description}</p>
+                            <p>{description}</p>
+                        </div>
+                        })
+                    }*/}
+                </div>
             </div>
 
         </motion.div>

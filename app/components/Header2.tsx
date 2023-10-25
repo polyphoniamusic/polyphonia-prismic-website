@@ -12,7 +12,7 @@ import { AnimatePresence } from 'framer-motion';
 import { createClient } from '@/prismicio';
 import { PrismicNextLink, PrismicNextImage  } from '@prismicio/next';
 
-export default async function Header({}) {
+export default async function Header2({}) {
     
     const client = createClient();
   

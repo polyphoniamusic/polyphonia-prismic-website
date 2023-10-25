@@ -76,6 +76,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           playsInline
           loop
           preload="auto"
+          poster="/assets/images/polyphonia-website-hero-poster.jpg"
           src="/assets/videos/polyphonia-website-hero-video.mp4"
         ></video>
       </div>

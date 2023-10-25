@@ -11,9 +11,9 @@ import 'styled-jsx/style';
 import { createClient } from '@/prismicio'
 
 // Import components
-import Header from '@/app/components/Header'
-import Header2 from '@/app/components/Header/index'
-import Footer from '@/app/components/Footer'
+//import Header from '@/app/components/Header2';
+import Header from '@/app/components/Header/Header';
+import Footer from '@/app/components/Footer';
 import Loader from '@/app/components/Loader';
 
 //import { SmoothScrollProvider } from '@/app/components/contexts/SmoothScroll.context'
@@ -102,7 +102,7 @@ export default function RootLayout({
               {/* Cursor & Smooth scroll effect with Locomotive Scroll */}
               <CustomCursor/>
               
-              <Header2/>
+              <Header/>
               {children}
               <Footer/>
 

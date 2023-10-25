@@ -10,6 +10,7 @@ export const components = {
   banner: dynamic(() => import("./Banner")),
   blog_section: dynamic(() => import("./BlogSection")),
   booking_section: dynamic(() => import("./BookingSection")),
+  brand_assets_section: dynamic(() => import("./BrandAssetsSection")),
   contact_section: dynamic(() => import("./ContactSection")),
   hero: dynamic(() => import("./Hero")),
   label_introduction: dynamic(() => import("./Intro")),
