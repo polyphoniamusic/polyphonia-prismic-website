@@ -7,7 +7,7 @@ import gsap from 'gsap';
 import Link from 'next/link';
 
 export default function link({data, index}) {
-    const { title, link, newtab } = data;
+    const { title, link, newtab, icon } = data;
     const outer = useRef(null);
     const inner = useRef(null);
 
@@ -45,7 +45,19 @@ export default function link({data, index}) {
           {...mountAnim}
           custom={index} 
           className={styles.el}>
-            <Link href={link} target={newtab}>{title}<img className="arrow" src="/assets/images/icons/arrow-icon-white.svg"/></Link>
+            {title ? 
+                (<li className="header-nav-button">
+                    <Link href={link} target={newtab}>
+                        {title}
+                        <Image width="30" height="30" className="arrow" src="/assets/images/icons/arrow-icon-white.svg"/>
+                    </Link>
+                </li>) : (
+                <li className="header-nav-link">
+                    <Link href={link} target={newtab}>
+                        <Image width="30" height="30" src={icon}/>
+                    </Link>
+                </li>)
+            }
             <div ref={outer} className={styles.outer}>
                 <div ref={inner} className={styles.inner}></div>
             </div>

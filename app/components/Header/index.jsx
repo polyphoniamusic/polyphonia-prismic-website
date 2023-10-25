@@ -8,8 +8,8 @@ import Image from 'next/image';
 import Link from './Menu/link';
 
 // Import Priscmic Data Client
-import { createClient } from '@/prismicio';
-import { PrismicNextLink, PrismicNextImage  } from '@prismicio/next';
+//import { createClient } from '@/prismicio';
+//import { PrismicNextLink, PrismicNextImage  } from '@prismicio/next';
 
 import SiteIcon from '@/public/assets/images/icons/polyphonia-icon-white.svg';
 import SpotifyIcon from '@/public/assets/images/icons/socials/spotify-icon-white.svg';
@@ -47,22 +47,22 @@ const menuButton = [
 
 const menuSocials = [
     {
-        title: "Spotify",
+        //title: "Spotify",
         link: 'https://open.spotify.com/user/315n6x5keqsyp2xw7yqlqdoirwzm',
         alt: 'Spotify Icon',
-        Icon: SpotifyIcon,
+        icon: SpotifyIcon,
     },
     {
-        title: "Instagram",
+        //title: "Instagram",
         link: 'https://www.instagram.com/polyphoniamusic',
         alt: 'Instagram Icon',
-        Icon: InstagramIcon,
+        icon: InstagramIcon,
     },
     {
-        title: "LinkedIn",
+        //title: "LinkedIn",
         link: 'https://www.linkedin.com/company/polyphoniamusic',
         alt: 'LinkedIn Icon',
-        Icon: LinkedinIcon,
+        icon: LinkedinIcon,
     },
 ]
 

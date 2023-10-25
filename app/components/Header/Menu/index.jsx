@@ -4,7 +4,12 @@ import styles from './style.module.scss';
 import Link from './link';
 import { useState } from 'react';
 
-const menu = [
+import SiteIcon from '@/public/assets/images/icons/polyphonia-icon-white.svg';
+import SpotifyIcon from '@/public/assets/images/icons/socials/spotify-icon-white.svg';
+import InstagramIcon from '@/public/assets/images/icons/socials/instagram-icon-white.svg';
+import LinkedinIcon from '@/public/assets/images/icons/socials/linkedin-icon-white.svg';
+
+const menuButton = [
   {
     title: "Artists",
     link: '/artists',
@@ -33,6 +38,27 @@ const menu = [
   }
 ]
 
+const menuSocials = [
+  {
+      //title: "Spotify",
+      link: 'https://open.spotify.com/user/315n6x5keqsyp2xw7yqlqdoirwzm',
+      alt: 'Spotify Icon',
+      icon: SpotifyIcon,
+  },
+  {
+      //title: "Instagram",
+      link: 'https://www.instagram.com/polyphoniamusic',
+      alt: 'Instagram Icon',
+      icon: InstagramIcon,
+  },
+  {
+      //title: "LinkedIn",
+      link: 'https://www.linkedin.com/company/polyphoniamusic',
+      alt: 'LinkedIn Icon',
+      icon: LinkedinIcon,
+  },
+]
+
 export default function index({closeMenu}) {
 
   return (
@@ -42,10 +68,19 @@ export default function index({closeMenu}) {
         </div>
         <div className={styles.body}>
           {
-            menu.map( (el, index) => {
-              return <button className="header-line" onClick={() => {closeMenu()}}><Link data={el} index={index} key={index}/></button>
+            menuButton.map( (el, index) => {
+              return  <button className="header-line" onClick={() => {closeMenu()}}>
+                        <Link data={el} index={index} key={index}/>
+                      </button>
             })
           }
+          {/*{
+            menuSocials.map( (el, index) => {
+              return  <button className="header-line" onClick={() => {closeMenu()}}>
+                        <Link data={el} index={index} key={index}/>
+                      </button>
+            })
+          }*/}
         </div>
     </motion.div>
   )
