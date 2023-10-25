@@ -75,7 +75,7 @@ export default function index({closeMenu}) {
   return (
     <motion.div className={styles.menu} variants={opacity} initial="initial" animate="enter" exit="exit">
         <div className={styles.header}>
-          {/*<button onClick={() => {closeMenu()}}>(CLOSE MENU)</button>*/}
+          {/*<button className="header-nav-mobile-button" onClick={() => {closeMenu()}}>CLOSE MENU</button>*/}
           <motion.svg 
             variants={slideLeft} 
             {...mountAnim}
