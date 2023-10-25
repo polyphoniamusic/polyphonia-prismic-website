@@ -324,13 +324,20 @@ header, .header {
 .header-line div a {
     padding-left: 1rem;
     transition: all .15s ease-in-out;
+    width: 100%;
+    text-align: left;
+}
+
+.header-line div a div {
+    display: inline-flex;
+    text-align: left;
 }
 
 .header-line div:hover a {
     color: var(--color-background);
 }
 
-.header-line > div > a > img {
+.header-line > div > a > div > img {
     opacity: 0;
 }
 
@@ -512,6 +519,7 @@ header, .header {
 
 .header-nav-mobile-button {
     font-size: 2rem;
+    line-height: 1.5rem !important;
     font-family: var(--font-space-grotesk);
     line-height: initial;
 }
@@ -2365,6 +2373,8 @@ footer {
         display: none;
     }   
     .header-container-mobile {
+        align-items: start;
+        padding-top: calc(var(--container-padding)*1.5);
         display: flex;
     }
     .header-nav-button,
@@ -2379,7 +2389,7 @@ footer {
     }
     /* HERO */
     .hero {
-        margin-top: calc(-56px - var(--container-padding));
+        margin-top: calc(-56px - var(--container-padding)*1.5);
     }
     /* ARTIST */
     .artist-block {
@@ -2610,7 +2620,7 @@ footer {
         height: 2.75rem;
     }
     .hero {
-        margin-top: calc(-44px - var(--container-padding));
+        margin-top: calc(-44px - var(--container-padding)*1.5);
     }
     /* HEADER */
     .header-line div a {

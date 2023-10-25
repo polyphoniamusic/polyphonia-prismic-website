@@ -48,8 +48,10 @@ export default function link({data, index}) {
             {title ? 
                 (
                     <Link href={link} target={newtab}>
-                        {title}
-                        <Image width="30" height="30" className="arrow" src="/assets/images/icons/arrow-icon-white.svg"/>
+                        <div>
+                            {title}
+                            <Image width="30" height="30" className="arrow" src="/assets/images/icons/arrow-icon-white.svg"/>
+                        </div>
                     </Link>
                 ) : (
                     <div>
