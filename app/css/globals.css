@@ -264,7 +264,6 @@ li {
     max-width: fit-content;
     border-radius: 1.25rem;
 }
-
 .button-cta-white {
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
@@ -284,6 +283,11 @@ li {
     background: var(--color-background);
     color: var(--color-primary);
 }
+
+.button-cta-small-padding {
+    padding: 0.15rem 0.75rem 0.1rem 0.75rem;
+}
+
 
 .newsletter-button {
     border-radius: 1.5rem;
@@ -520,8 +524,15 @@ header, .header {
 .header-nav-mobile-button {
     font-size: 2rem;
     line-height: 1.5rem !important;
+    line-height: 2rem !important;
     font-family: var(--font-space-grotesk);
     line-height: initial;
+    display: flex;
+    min-width: fit-content;
+}
+
+.header-nav-mobile-button span {
+    transform: translateY(-0.18rem);
 }
 
 .header-mobile-close-button {
@@ -2193,6 +2204,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 3rem;
 }
 
 .footer-block {
@@ -2202,7 +2214,7 @@ footer {
 }
 
 .footer-block:last-child {
-    margin-top: 3rem;
+    /*margin-top: 3rem;*/
     align-items: end;
 }
 
@@ -2216,12 +2228,19 @@ footer {
     flex-direction: column;
 }
 
-.footer-column-inline {
+.footer-column:last-child {
+    margin: 0;
+}
+
+.footer-column-reverse {
     display: flex;
 }
 
-.footer-column:last-child {
-    margin: 0;
+.footer-column-inline {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill,minmax(3rem,1fr));
 }
 
 .footer-nav-link,
@@ -2232,6 +2251,20 @@ footer {
     text-transform: uppercase;
     font-family: var(--font-space-grotesk);
     font-size: 2rem;
+}
+
+.footer-nav-social {
+    border: solid 1px white;
+    border-radius: 10rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    list-style: none;
+    line-height: 2rem;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    justify-content: center;
+    font-size: 1.25rem;
 }
 
 .footer-nav-link:hover {
@@ -2376,6 +2409,9 @@ footer {
         align-items: start;
         padding-top: calc(var(--container-padding)*1.5);
         display: flex;
+        margin: 0;
+        justify-content: space-between;
+        gap: 2rem;
     }
     .header-nav-button,
     .header-nav-button > div a  {
@@ -2432,10 +2468,10 @@ footer {
         flex-direction: column;
         align-items: start;
     }
-    .footer-column-inline {
+    .footer-column-reverse {
         flex-direction: column-reverse;
     }
-    .footer-column-inline:last-child {
+    .footer-column-reverse:last-child {
         align-items: end;
         display: none;
     }

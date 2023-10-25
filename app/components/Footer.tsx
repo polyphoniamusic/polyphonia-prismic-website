@@ -30,15 +30,6 @@ export default async function Footer() {
                             ))}
                         </div>
 
-                        {/* SOCIALS */}
-                        <div className="footer-column">
-                            {settings.data.footer_navigation_socials.map(({label, link}) => (
-                                <li className="footer-nav-link" key={label}>
-                                    <PrismicNextLink className="footer-nav-link" field={link}>{label}</PrismicNextLink>
-                                </li>
-                            ))}
-                        </div>
-
                         {/* MORE */}
                         <div className="footer-column">
                             {settings.data.footer_navigation_more.map(({label, link}) => (
@@ -59,7 +50,20 @@ export default async function Footer() {
                 </div>
 
                 <div className="footer-block">
+
+                    {/* SOCIALS */}
                     <div className="footer-column-inline">
+                        {settings.data.footer_navigation_socials.map(({label, link}) => (
+                            <li className="button-cta button-cta-white button-cta-small-padding" key={label}>
+                                <PrismicNextLink field={link}>{label}</PrismicNextLink>
+                            </li>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="footer-block">
+
+                    <div className="footer-column-reverse">
                         <PrismicRichText field={settings.data.copyright} components={{
                             paragraph: ({children}) =>(
                                 <p className="footer-nav-legal">{children}</p>
@@ -71,7 +75,7 @@ export default async function Footer() {
                             </li>
                         ))}
                     </div>
-                    <div className="footer-column-inline">
+                    <div className="footer-column-reverse">
                         <a href="/">
                             <PrismicNextImage field={settings.data.site_logo} className="site-logo footer-logo"/>
                         </a>

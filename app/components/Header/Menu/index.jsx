@@ -77,9 +77,18 @@ export default function index({closeMenu}) {
 
   return (
     <motion.div className={styles.menu} variants={opacity} initial="initial" animate="enter" exit="exit">
-        <div className={styles.header}>
-          {/*<button className="header-nav-mobile-button" onClick={() => {closeMenu()}}>CLOSE MENU</button>*/}
-          <motion.svg 
+        <div className="header-container-mobile">
+          <div className="footer-column-inline">
+            {
+              menuSocials.map( (el, index) => {
+                return  <button className="button-cta button-cta-white button-cta-small-padding" onClick={() => {closeMenu()}}>
+                          <Link data={el} index={index} key={index}/>
+                        </button>
+              })
+            }
+          </div>
+          <button className="header-nav-mobile-button" onClick={() => {closeMenu()}}><span>(</span>CLOSE MENU<span>)</span></button> {/* X */}
+          {/*<motion.svg 
             variants={slideLeft} 
             {...mountAnim}
             onClick={() => {closeMenu()}} 
@@ -90,7 +99,9 @@ export default function index({closeMenu}) {
             xmlns="http://www.w3.org/2000/svg">
               <path d="M1.5 1.5L67 67" stroke="white"/>
               <path d="M66.5 1L0.999997 66.5" stroke="white"/>
-          </motion.svg>
+          </motion.svg>*/}
+
+          
         </div>
         <div className={styles.body}>
           {
@@ -100,15 +111,6 @@ export default function index({closeMenu}) {
                       </button>
             })
           }
-          {/*<div className="header-line header-line-socials">
-            {
-              menuSocials.map( (el, index) => {
-                return  <button className="" onClick={() => {closeMenu()}}>
-                          <Link data={el} index={index} key={index}/>
-                        </button>
-              })
-            }
-          </div>*/}
         </div>
     </motion.div>
   )
