@@ -14,6 +14,7 @@
     --color-light-grey: #c0c0c0;
     --color-grey: #808080;
     --color-grey-dark: #515151;
+    --color-disabled: #666666;
     --color-background: black;
 
     --transparent-background: rgba(0, 0, 0, 0.9);
@@ -115,13 +116,19 @@ li {
 }*/
 
 .disabled {
-    opacity: var(--opacity-disabled);
+    /*opacity: var(--opacity-disabled);*/
     cursor: not-allowed;
+    color: var(--color-grey-dark) !important;
+    border-color: var(--color-grey-dark) !important;
+}
+
+.disabled::before {
+    color: var(--color-primary);
 }
 
 .disabled:hover {
     background: revert !important;
-    color: revert !important;
+    color: var(--color-grey-dark);
     cursor: not-allowed;
 }
 
@@ -1806,6 +1813,30 @@ header, .header {
     align-items: center;
     max-width: max-content;
     margin-left: auto;
+}
+
+.ticket-button::before {
+    content: 'NEW';
+    position: absolute;
+    background: var(--color-quinary);
+    transform: translate(1rem, -2rem) rotate(3deg);
+    border-radius: 100%;
+    padding: 0.15em 0.75rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.upcoming-button::before {
+    content: 'UPCOMING';
+    position: absolute;
+    background: var(--color-secondary);
+    transform: translate(1rem, -2rem) rotate(3deg);
+    border-radius: 100%;
+    padding: 0.15em 0.75rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.25rem;
 }
 
 /* ---------- LABEL ---------- */

@@ -62,12 +62,12 @@ const BookingSection = ({ slice }: BookingSectionProps): JSX.Element => {
                     </div>
                   </div>
                   {concert.tba ? (
-                    <div className={`button-cta button-cta-white booking-grid-button-block disabled ${isPastConcert ? "past-button" : "ticket-button"}`}>
+                    <div className={`button-cta button-cta-white booking-grid-button-block disabled ${isPastConcert ? "past-button" : "upcoming-button"}`}>
                       {isPastConcert ? "PAST" : "TICKETS"}
                     </div>
                   ) : (
                     <PrismicNextLink field={concert.link} className={`button-cta button-cta-white booking-grid-button-block ${isPastConcert ? "past-button" : "ticket-button"}`}>
-                      {isPastConcert ? "PAST" : "TICKETS"}
+                      {isPastConcert ? 'PAST' : 'TICKETS' }
                     </PrismicNextLink>
                   )}
                 </div>
