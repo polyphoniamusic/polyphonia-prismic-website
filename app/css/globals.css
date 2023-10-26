@@ -1818,7 +1818,7 @@ header, .header {
 .ticket-button::before {
     content: 'NEW';
     position: absolute;
-    background: var(--color-quinary);
+    background: var(--color-quaternary);
     transform: translate(1rem, -2rem) rotate(3deg);
     border-radius: 100%;
     padding: 0.15em 0.75rem;
@@ -1830,7 +1830,7 @@ header, .header {
 .upcoming-button::before {
     content: 'UPCOMING';
     position: absolute;
-    background: var(--color-secondary);
+    background: var(--color-quinary);
     transform: translate(0.5rem, -2rem) rotate(3deg);
     border-radius: 100%;
     padding: 0.15em 0.75rem;
