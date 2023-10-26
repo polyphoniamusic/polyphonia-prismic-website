@@ -77,11 +77,9 @@ export default function Header2() {
         <header id="home">
             <div className="header-container">
                 {/* Navigation Logo */}
-                <div className="header-logo-block">
-                    <a href="/">
-                        <Image src={SiteIcon} className="site-logo"/>
-                    </a>
-                </div>
+                <a className="header-logo-block" href="/">
+                    <Image height="60" src={SiteIcon} className="site-logo"/>
+                </a>
 
                 {/* Navigation Menu */}
                 <nav className="header-nav">
@@ -103,11 +101,11 @@ export default function Header2() {
             </div>
             <div className="header-container-mobile">
                 {/* Mobile Navigation Menu */}
-                <nav className="header-nav-mobile">
-                    <a href="/">
-                        <Image src={SiteIcon} className="site-logo"/>
-                    </a>
-                </nav>
+                    <nav className="header-nav-mobile">
+                        <a href="/">
+                            <Image src={SiteIcon} className="site-logo"/>
+                        </a>
+                    </nav>
                     <Burger openMenu={() => {setMenuIsOpen(true)}}/>
                     <AnimatePresence mode="wait">
                         {

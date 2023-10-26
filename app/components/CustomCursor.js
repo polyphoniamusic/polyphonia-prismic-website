@@ -20,9 +20,9 @@ function CustomCursor() {
 
     // Check if the cursor is over a clickable element by inspecting the cursor style.
     setIsPointer(
-  window.getComputedStyle(target).getPropertyValue("cursor") === "pointer" ||
-  target.tagName === "A"
-);
+      window.getComputedStyle(target).getPropertyValue("cursor") === "pointer" ||
+      target.tagName === "A"
+    );
   };
 
   // Set up an effect to add and remove the mousemove event listener.

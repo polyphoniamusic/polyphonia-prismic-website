@@ -78,10 +78,10 @@ export default function index({closeMenu}) {
   return (
     <motion.div className={styles.menu} variants={opacity} initial="initial" animate="enter" exit="exit">
         <div className="header-container-mobile">
-          <div className="footer-column-inline">
+          <div className="header-container-mobile-socials">
             {
               menuSocials.map( (el, index) => {
-                return  <button className="button-cta button-cta-white button-cta-small-padding" onClick={() => {closeMenu()}}>
+                return  <button onClick={() => {closeMenu()}}>
                           <Link data={el} index={index} key={index}/>
                         </button>
               })

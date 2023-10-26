@@ -56,7 +56,7 @@ export default function link({data, index}) {
                 ) : (
                     <div>
                     {name ? (
-                        <Link href={link} target={newtab}>{name}</Link>
+                        <Link className="button-cta button-cta-white button-cta-small-padding" href={link} target={newtab}>{name}</Link>
                             ) : (
                             <Link href={link} target={newtab}>
                                 <Image width="30" height="30" src={icon}/>
@@ -68,7 +68,7 @@ export default function link({data, index}) {
             }
             <div ref={outer} className={styles.outer}>
                 <div ref={inner} className={styles.inner}>
-                {/*{
+                    {/*{
                         [...Array(2)].map( (_, index) => {
                         return <div key={index} className={styles.container}>
                             <p>{description}</p>
