@@ -1809,7 +1809,7 @@ header, .header {
 
 .booking-grid-button-block {
     display: flex;
-    justify-content: end;
+    /*justify-content: end;*/
     align-items: center;
     max-width: max-content;
     margin-left: auto;
@@ -1831,7 +1831,7 @@ header, .header {
     content: 'UPCOMING';
     position: absolute;
     background: var(--color-secondary);
-    transform: translate(1rem, -2rem) rotate(3deg);
+    transform: translate(0.5rem, -2rem) rotate(3deg);
     border-radius: 100%;
     padding: 0.15em 0.75rem;
     display: flex;
@@ -2690,6 +2690,11 @@ footer {
     }
     .booking-grid-button-block {
         margin-left: unset;
+        min-width: 100%;
+        width: fit-content;
+    }
+    .ticket-button::before {
+        transform: translate(2rem, -2rem) rotate(3deg);
     }
     /* ARTIST */
     /*.artist-container {
