@@ -16,19 +16,19 @@ export const repositoryName = config.repositoryName;
 const routes: prismic.ClientConfig["routes"] = [
   {
     type: 'homepage',
-    path: '/',
+    path: '/:lang?',
   },
   {
     type: 'page',
-    path: '/:uid',
+    path: '/:lang?/:uid',
   },
   {
     type: 'artistpage',
-    path: '/artists/:uid',
+    path: '/:lang?/artists/:uid',
   },
   {
     type: 'articlepage',
-    path: '/blog/:uid',
+    path: '/:lang?/blog/:uid',
   },
 ];
 

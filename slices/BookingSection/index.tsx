@@ -55,7 +55,7 @@ const BookingSection = ({ slice }: BookingSectionProps): JSX.Element => {
                         ) : (
                       <p className="concert-date">{formattedDate}</p>
                     )}
-                    <p className="artist-name">{concert.artist_name}</p>
+                    <PrismicNextLink target="_blank" field={concert.artist_page} className="artist-name">{concert.artist_name}</PrismicNextLink>
                     <div className="booking-grid-column">
                       <p className="place-name">{concert.place_name}</p>
                       <p className="city_country">{concert.city_country}</p>
@@ -63,11 +63,11 @@ const BookingSection = ({ slice }: BookingSectionProps): JSX.Element => {
                   </div>
                   {concert.tba ? (
                     <div className={`button-cta button-cta-white booking-grid-button-block disabled ${isPastConcert ? "past-button" : "upcoming-button"}`}>
-                      {isPastConcert ? "PAST" : "TICKETS"}
+                      {isPastConcert ? <>{slice.primary.past_event}</> : <>{slice.primary.upcoming_event}</>}
                     </div>
                   ) : (
                     <PrismicNextLink field={concert.link} className={`button-cta button-cta-white booking-grid-button-block ${isPastConcert ? "past-button" : "ticket-button"}`}>
-                      {isPastConcert ? 'PAST' : 'TICKETS' }
+                      {isPastConcert ? <>{slice.primary.past_event}</> : <>{slice.primary.upcoming_event}</>}
                     </PrismicNextLink>
                   )}
                 </div>

@@ -13,6 +13,16 @@
 						}
 					}
 				]
+			},
+			"past_event": {
+				"__TYPE__": "FieldContent",
+				"value": "alone",
+				"type": "Text"
+			},
+			"upcoming_event": {
+				"__TYPE__": "FieldContent",
+				"value": "laugh",
+				"type": "Text"
 			}
 		},
 		"items": [
@@ -67,6 +77,16 @@
 							"__TYPE__": "FieldContent",
 							"value": "powder",
 							"type": "Text"
+						}
+					],
+					[
+						"artist_page",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "DocumentLink",
+								"id": "mock_document_id"
+							}
 						}
 					]
 				]

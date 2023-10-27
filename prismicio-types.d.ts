@@ -1224,6 +1224,26 @@ export interface BookingSectionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
+
+  /**
+   * Past Event field in *BookingSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: booking_section.primary.past_event
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  past_event: prismic.KeyTextField;
+
+  /**
+   * Upcoming Event field in *BookingSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: booking_section.primary.upcoming_event
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  upcoming_event: prismic.KeyTextField;
 }
 
 /**
@@ -1259,6 +1279,16 @@ export interface BookingSectionSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   city_country: prismic.KeyTextField;
+
+  /**
+   * Artist Page field in *BookingSection → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: booking_section.items[].artist_page
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  artist_page: prismic.ContentRelationshipField<"artistpage">;
 
   /**
    * Artist Name field in *BookingSection → Items*
@@ -1724,6 +1754,31 @@ export type LabelSectionSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Newsletter → Primary*
+ */
+export interface NewsletterSliceDefaultPrimary {
+  /**
+   * Heading field in *Newsletter → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: newsletter.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Label field in *Newsletter → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: newsletter.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
  * Default variation for Newsletter Slice
  *
  * - **API ID**: `default`
@@ -1732,7 +1787,7 @@ export type LabelSectionSlice = prismic.SharedSlice<
  */
 export type NewsletterSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<NewsletterSliceDefaultPrimary>,
   never
 >;
 
@@ -2289,6 +2344,7 @@ declare module "@prismicio/client" {
       LabelSectionSliceVariation,
       LabelSectionSliceDefault,
       NewsletterSlice,
+      NewsletterSliceDefaultPrimary,
       NewsletterSliceVariation,
       NewsletterSliceDefault,
       PrivacySectionSlice,

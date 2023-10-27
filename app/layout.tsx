@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect } from 'react';
-
 import type { Metadata, ResolvingMetadata } from 'next'
 import './css/globals.css'
 import clsx from 'clsx'
@@ -11,13 +9,9 @@ import 'styled-jsx/style';
 import { createClient } from '@/prismicio'
 
 // Import components
-//import Header from '@/app/components/Header2';
 import Header from '@/app/components/Header/Header';
 import Footer from '@/app/components/Footer';
 import Loader from '@/app/components/Loader';
-
-//import { SmoothScrollProvider } from '@/app/components/contexts/SmoothScroll.context'
-//import { initLocomotiveScroll } from '@/app/components/initLocomotiveScroll';
 
 // Import UX Components
 import CustomCursor from "@/app/components/CustomCursor";
@@ -95,18 +89,12 @@ export default function RootLayout({
    
       <html lang="en" className={clsx(spaceGrotesk.variable, poppins.variable, n27Regular.variable)}>
         <body data-scroll-container>
-          {/*<SmoothScrollProvider options={{ smooth: true }}></SmoothScrollProvider>*/}
           <AnimatePresence mode="wait">
             <motion.div>
-
-              {/* Cursor & Smooth scroll effect with Locomotive Scroll */}
               <CustomCursor/>
-              
               <Header/>
               {children}
               <Footer/>
-
-              {/* Page transition with Framer Motion */}
               <motion.div 
                 className="slide-in"
                 initial={{translateY: 0}}
@@ -115,14 +103,6 @@ export default function RootLayout({
                 transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}>
                   <Loader/>
               </motion.div>
-              {/*<motion.div
-                className="slide-out"
-                initial={{translateY: 100 + 'svh'}}
-                animate={{translateY: -100 + 'svh'}}
-                exit={{translateY: -100 + 'svh'}}
-                transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}>
-                  <Loader/>
-              </motion.div>*/}
             </motion.div>
           </AnimatePresence>
         </body>

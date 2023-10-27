@@ -2,7 +2,18 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "forget",
+				"type": "Text"
+			},
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "method",
+				"type": "Text"
+			}
+		},
 		"items": []
 	}
 ]

@@ -20,6 +20,20 @@
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
+        },
+        "past_event": {
+          "type": "Text",
+          "config": {
+            "label": "Past Event",
+            "placeholder": ""
+          }
+        },
+        "upcoming_event": {
+          "type": "Text",
+          "config": {
+            "label": "Upcoming Event",
+            "placeholder": ""
+          }
         }
       },
       "items": {
@@ -42,6 +56,16 @@
           "config": {
             "label": "City Country",
             "placeholder": ""
+          }
+        },
+        "artist_page": {
+          "type": "Link",
+          "config": {
+            "label": "Artist Page",
+            "select": "document",
+            "customtypes": [
+              "artistpage"
+            ]
           }
         },
         "artist_name": {
