@@ -70,7 +70,7 @@ const menuSocials = [
       icon: LinkedinIcon,
       name: 'LI',
       newtab: "_blank",
-  },
+  }
 ]
 
 export default function index({closeMenu}) {
@@ -88,21 +88,22 @@ export default function index({closeMenu}) {
             }
           </div>
           {/*<button className="header-nav-mobile-button" onClick={() => {closeMenu()}}><span>(</span>CLOSE MENU<span>)</span></button> {/* X */}
-          <motion.svg 
-            variants={slideLeft} 
-            {...mountAnim}
-            onClick={() => {closeMenu()}} 
-            width="68" 
-            height="68" 
-            viewBox="0 0 68 68" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg">
-              {/*<path d="M1.5 1.5L67 67" stroke="white"/>
-              <path d="M66.5 1L0.999997 66.5" stroke="white"/>*/}
+          <button onClick={() => {closeMenu()}}>
+            <motion.svg 
+              variants={slideLeft} 
+              {...mountAnim}
+              width="68" 
+              height="68" 
+              viewBox="0 0 68 68" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg">
+                {/*<path d="M1.5 1.5L67 67" stroke="white"/>
+                <path d="M66.5 1L0.999997 66.5" stroke="white"/>*/}
 
-              <path d="M1.5,1.5L67,67" stroke="white" stroke-width="4px"/>
-              <path d="M66.5,1L1,66.5" stroke="white" stroke-width="4px"/>
-          </motion.svg>
+                <path d="M1.5,1.5L67,67" stroke="white" stroke-width="4px"/>
+                <path d="M66.5,1L1,66.5" stroke="white" stroke-width="4px"/>
+            </motion.svg>
+          </button>
 
           
         </div>

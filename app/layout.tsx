@@ -9,7 +9,7 @@ import 'styled-jsx/style';
 import { createClient } from '@/prismicio'
 
 // Import components
-import Header from '@/app/components/Header/Header';
+import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 import Loader from '@/app/components/Loader';
 

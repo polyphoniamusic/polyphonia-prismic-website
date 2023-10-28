@@ -1,11 +1,11 @@
 //'use client';
 import {useState} from 'react'
-import Burger from './Burger';
-import Stairs from './Stairs';
-import Menu from './Menu';
+import Burger from './Header/Burger';
+import Stairs from './Header/Stairs';
+import Menu from './Header/Menu';
 import { AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import Link from './Menu/link';
+import Link from './Header/Menu/link';
 
 // Import Priscmic Data Client
 import { createClient } from '@/prismicio';
@@ -69,7 +69,7 @@ const menuSocials = [
     },
 ]
 
-export default function Header2() {
+export default function Header() {
 
     const [menuIsOpen, setMenuIsOpen] = useState(false);
 
@@ -78,7 +78,7 @@ export default function Header2() {
             <div className="header-container">
                 {/* Navigation Logo */}
                 <a className="header-logo-block" href="/">
-                    <Image height="60" src={SiteIcon} className="site-logo"/>
+                    <Image height="60" src={SiteIcon} className="site-logo" alt="Site Logo"/>
                 </a>
 
                 {/* Navigation Menu */}
@@ -103,7 +103,7 @@ export default function Header2() {
                 {/* Mobile Navigation Menu */}
                     <nav className="header-nav-mobile">
                         <a href="/">
-                            <Image src={SiteIcon} className="site-logo"/>
+                            <Image src={SiteIcon} className="site-logo" alt="Site Logo"/>
                         </a>
                     </nav>
                     <Burger openMenu={() => {setMenuIsOpen(true)}}/>

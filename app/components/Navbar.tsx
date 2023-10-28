@@ -1,4 +1,4 @@
-import Header from '@/app/components/Header/Header';
+import Header from '@/app/components/Header';
 import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {

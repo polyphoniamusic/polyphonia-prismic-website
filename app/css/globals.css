@@ -665,7 +665,7 @@ header, .header {
 .hero-icon {
     width: 5rem;
     transform: translateY(-5px);
-    mix-blend-mode: exclusion;
+    /*mix-blend-mode: exclusion;*/
     transition: all .25s ease-in-out;
     margin-left: 2rem;
 }
@@ -1850,6 +1850,22 @@ header, .header {
     margin-left: auto;
 }
 
+.booking-artist-name {
+    max-width: fit-content;
+}
+
+.booking-concert-date {
+
+}
+
+.booking-place-name {
+
+}
+
+.booking-city-country {
+
+}
+
 .ticket-button::before {
     content: 'NEW';
     position: absolute;
@@ -2180,8 +2196,8 @@ header, .header {
     content: '/';
     margin: 0 0.5rem;
     display: inline-flex;
-    font-size: 11px;
-    transform: translateY(-2px);
+    font-size: 13px;
+    transform: translateY(-2.5px);
 }
 .article-introduction {
     display: inline-flex;
@@ -2325,6 +2341,10 @@ footer {
     display: flex;
 }
 
+.footer-column-reverse:last-child {
+    margin-top: -100%;
+}
+
 .footer-column-inline,
 .header-container-mobile-socials {
     display: grid;
@@ -2372,7 +2392,7 @@ footer {
 
 .footer-logo {
     height: 10rem;
-    transform: translateY(5px);
+    transform: translateY(-5px);
 }
 
 .footer-icon {
@@ -2537,7 +2557,7 @@ footer {
     }   
     .header-container-mobile {
         align-items: start;
-        padding-top: calc(var(--container-padding)*1.5);
+        /*padding-top: calc(var(--container-padding)*1.5);*/
         display: flex;
         margin: 0;
         justify-content: space-between;
@@ -2602,21 +2622,6 @@ footer {
         width: 100%;
         max-width: unset;
     }
-    /* FOOTER */
-    .footer-block:last-child {
-        flex-direction: column;
-        align-items: start;
-    }
-    .footer-column-reverse {
-        flex-direction: column-reverse;
-    }
-    .footer-column-reverse:last-child {
-        align-items: end;
-        display: none;
-    }
-    .footer-nav-legal:last-child {
-        margin-bottom: var(--container-padding);
-    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -2672,6 +2677,18 @@ footer {
     .header-nav-mobile {
         display: flex;
     }*/
+    /* FOOTER */
+    .footer-block:last-child {
+        flex-direction: column;
+        align-items: start;
+    }
+    .footer-column-reverse:last-child {
+        align-items: end;
+        display: none;
+    }
+    .footer-nav-legal:last-child {
+        margin-bottom: var(--container-padding);
+    }
 }
 
 
@@ -2793,6 +2810,9 @@ footer {
     }
     .footer-nav-legal  { 
         max-width: 210px !important;
+    }
+    .footer-column-reverse {
+        flex-direction: column-reverse;
     }
     /* ARTISTS */
     .artists-container-block {

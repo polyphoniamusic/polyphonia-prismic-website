@@ -51,14 +51,14 @@ const BookingSection = ({ slice }: BookingSectionProps): JSX.Element => {
                 <div className={`booking-grid-line ${isPastConcert ? "past-concert" : "upcoming-concert"}`}>
                   <div className="booking-grid-block">
                     {concert.tba ? (
-                      <p className="concert-date">{concert.tba}</p>
+                      <p className="booking-concert-date">{concert.tba}</p>
                         ) : (
-                      <p className="concert-date">{formattedDate}</p>
+                      <p className="booking-concert-date">{formattedDate}</p>
                     )}
-                    <PrismicNextLink target="_blank" field={concert.artist_page} className="artist-name">{concert.artist_name}</PrismicNextLink>
+                    <PrismicNextLink target="_blank" field={concert.artist_page} className="booking-artist-name">{concert.artist_name}</PrismicNextLink>
                     <div className="booking-grid-column">
-                      <p className="place-name">{concert.place_name}</p>
-                      <p className="city_country">{concert.city_country}</p>
+                      <p className="booking-place-name">{concert.place_name}</p>
+                      <p className="booking-city-country">{concert.city_country}</p>
                     </div>
                   </div>
                   {concert.tba ? (
