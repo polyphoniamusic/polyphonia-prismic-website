@@ -16,7 +16,7 @@ export default async function Footer() {
     const settings = await client.getSingle("settings");
 
     return (
-        <footer id="home2">
+        <footer>
             <div className="footer-container">
                 <div className="footer-block">
 
