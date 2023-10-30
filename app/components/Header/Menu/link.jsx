@@ -4,10 +4,15 @@ import { mountAnim, rotateX } from '../anim';
 import Image from 'next/image';
 import { useRef } from 'react';
 import gsap from 'gsap';
-import Link from 'next/link';
+
+import { useMatchMedia } from "@/app/components/useMatchMedia";
+import { PrismicNextLink, PrismicNextImage  } from '@prismicio/next';
 
 export default function link({data, index}) {
-    const { title, link, newtab, icon, name, description } = data;
+
+    const isDesktopResolution = useMatchMedia("(min-width:1050px)", true);
+
+    const { label, link, monogram, icon } = data;
     const outer = useRef(null);
     const inner = useRef(null);
 
@@ -45,25 +50,23 @@ export default function link({data, index}) {
             {...mountAnim}
             custom={index} 
             className={styles.el}>
-            {title ? 
+            {icon ? 
                 (
-                    <Link href={link} target={newtab}>
+                    <PrismicNextLink field={link} >
+                        {isDesktopResolution ? (
+                            <PrismicNextImage width="30" height="30" field={icon}/>
+                        ) : (
+                            <div className="button-cta button-cta-white button-cta-small-padding">{monogram}</div>
+                            )
+                        }
+                    </PrismicNextLink>
+                ) : (
+                    <PrismicNextLink field={link}>
                         <div>
-                            {title}
+                            {label}
                             <Image width="30" height="30" className="arrow" src="/assets/images/icons/arrow-icon-white.svg"/>
                         </div>
-                    </Link>
-                ) : (
-                    <div>
-                    {name ? (
-                        <Link className="button-cta button-cta-white button-cta-small-padding" href={link} target={newtab}>{name}</Link>
-                            ) : (
-                            <Link href={link} target={newtab}>
-                                <Image width="30" height="30" src={icon}/>
-                            </Link>
-                        )
-                    }
-                    </div>
+                    </PrismicNextLink>  
                 )
             }
             <div ref={outer} className={styles.outer}>

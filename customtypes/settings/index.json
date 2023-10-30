@@ -76,7 +76,7 @@
             "label": {
               "type": "Text",
               "config": {
-                "label": "label",
+                "label": "Label",
                 "placeholder": ""
               }
             },
@@ -95,6 +95,13 @@
                 "placeholder": "",
                 "allowTargetBlank": true,
                 "select": null
+              }
+            },
+            "monogram": {
+              "type": "Text",
+              "config": {
+                "label": "Monogram",
+                "placeholder": ""
               }
             }
           }

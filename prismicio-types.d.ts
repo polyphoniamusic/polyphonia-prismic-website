@@ -324,7 +324,7 @@ export interface SettingsDocumentDataNavigationItem {
  */
 export interface SettingsDocumentDataSocialNavigationItem {
   /**
-   * label field in *Settings → Social Navigation*
+   * Label field in *Settings → Social Navigation*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -352,6 +352,16 @@ export interface SettingsDocumentDataSocialNavigationItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * Monogram field in *Settings → Social Navigation*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.social_navigation[].monogram
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  monogram: prismic.KeyTextField;
 }
 
 /**
