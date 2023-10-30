@@ -81,7 +81,7 @@ li {
 .master-fx {
     width: 100%;
     height: 100svh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     /*box-shadow: 0 0 100px 20px #071A1C inset;
@@ -99,7 +99,7 @@ li {
     background-size: 4000px;
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
     pointer-events: none;
     z-index: 0;
 }
@@ -704,16 +704,23 @@ header, .header {
     position: relative;
 }
 
-.hero-video {
+.hero-video-container {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     object-fit: cover;
     left: 0;
     z-index: -1;
 }
 
+.hero-video {
+    object-fit: cover;
+    top:0;
+    left:0;
+    width:100%;
+    min-height:100svh;
+}
 /* ---------- INTRODUCTION ---------- */
 .intro {
     color: var(--color-background);
@@ -2286,6 +2293,7 @@ header, .header {
     line-height: 3rem;
     flex-direction: column;
     align-items: center;
+    background: var(--color-background);
 }
 
 .banner-heading {
