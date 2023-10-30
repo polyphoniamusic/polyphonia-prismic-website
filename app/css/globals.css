@@ -2020,8 +2020,8 @@ header, .header {
 .contact-block {
     display: flex;
     flex-direction: column;
-    font-size: 5rem;
-    line-height: 5.5rem;
+    font-size: 4rem;
+    line-height: 4.5rem;
 }
 
 /*.contact-block a p {

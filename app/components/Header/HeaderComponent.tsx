@@ -22,7 +22,7 @@ export default function Header({settings} : { settings: any}) {
         const showAnim = gsap.from('.header-nav-block, .header-nav-mobile', {
             yPercent: -200,
             paused: true,
-            duration: 0.5
+            duration: 0.35
         }).progress(1);
 
         ScrollTrigger.create({

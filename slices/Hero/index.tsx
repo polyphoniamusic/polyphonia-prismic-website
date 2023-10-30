@@ -79,6 +79,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           poster="/assets/images/polyphonia-website-hero-poster.jpg"
           src="/assets/videos/polyphonia-website-hero-video.mp4"
         ></video>
+       
       </div>
     </section>
   );
