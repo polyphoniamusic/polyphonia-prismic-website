@@ -2008,7 +2008,7 @@ header, .header {
     display: flex;
     flex-direction: column;
     font-size: 3.5rem;
-    line-height: 3.5rem;
+    line-height: 4rem;
 }
 
 /*.contact-block a p {
@@ -2023,6 +2023,7 @@ header, .header {
     /*margin-right: 3rem;*/
     transition: all .5s ease-in-out;
     word-wrap: anywhere;
+    display: inline-flex;
 }
 
 .contact-block-email:hover {

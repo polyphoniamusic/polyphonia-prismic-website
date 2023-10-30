@@ -1,6 +1,7 @@
 import { Content } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import Image from "next/image";
 
 /**
  * Props for `ContactSection`.

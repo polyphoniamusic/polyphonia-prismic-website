@@ -64,7 +64,7 @@ export default function link({data, index}) {
                     <PrismicNextLink field={link}>
                         <div>
                             {label}
-                            <Image width="30" height="30" className="arrow" src="/assets/images/icons/arrow-icon-white.svg"/>
+                            <Image width="30" height="30" className="arrow" alt="Arrow White Icon" src="/assets/images/icons/arrow-icon-white.svg"/>
                         </div>
                     </PrismicNextLink>  
                 )
