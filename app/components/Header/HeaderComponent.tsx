@@ -1,18 +1,38 @@
 //'use client';
 
-import { Key, useState } from 'react'
+import { Key, useState, useEffect } from 'react'
 import Burger from './Burger';
 import Stairs from './Stairs';
 import Menu from './Menu';
 import { AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from './Menu/link';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 // Import Priscmic Data Client
-import { createClient } from '@/prismicio';
-import { PrismicNextLink, PrismicNextImage  } from '@prismicio/next';
+import { PrismicNextImage  } from '@prismicio/next';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Header({settings} : { settings: any}) {
+
+    useEffect(() => {
+        // Create your GSAP animation
+        const showAnim = gsap.from('header', {
+            yPercent: -200,
+            paused: true,
+            duration: 0.5
+        }).progress(1);
+
+        ScrollTrigger.create({
+            start: 'top top',
+            end: 99999,
+            onUpdate: (self) => {
+                self.direction === -1 ? showAnim.play() : showAnim.reverse();
+            }
+        });
+    }, []); 
 
     const [menuIsOpen, setMenuIsOpen] = useState(false);
 

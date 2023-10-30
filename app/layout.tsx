@@ -5,6 +5,8 @@ import './css/globals.css'
 import clsx from 'clsx'
 import 'styled-jsx/style';
 
+import { useEffect, useState } from 'react';
+
 // Import Priscmic Data Client
 import { createClient } from '@/prismicio'
 

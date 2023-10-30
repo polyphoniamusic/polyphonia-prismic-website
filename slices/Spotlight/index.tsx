@@ -56,7 +56,7 @@ const Spotlight = ({ slice }: SpotlightProps): JSX.Element => {
         scrub: 1,
         invalidateOnRefresh: true,
         anticipatePin: 1,
-        snap: 1 / (skillSet.length - dynamicValue1),
+        //snap: 1 / (skillSet.length - dynamicValue1),
         end: () => `+=${totalWidth - window.innerWidth}`,
       },
     });

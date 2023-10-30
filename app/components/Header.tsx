@@ -6,11 +6,11 @@ import HeaderComponent from '@/app/components/Header/HeaderComponent'
 import { createClient } from '@/prismicio';
 
 export default async function Header() {    
-    
+
     const client = createClient();  
     const settings = await client.getSingle("settings");
 
     return (
-            <HeaderComponent settings={settings}/>
+        <HeaderComponent settings={settings}/>
     )
 }

@@ -608,6 +608,14 @@ header, .header {
     gap: 10px;
 }
 
+.visible {
+    opacity: 1;
+}
+
+.hidden {
+   opacity: 0;
+}
+
 /* ---------- HERO BANNER ---------- */
 .hero, .showroll, .spotlight, .intro {
     /*scroll-snap-align: start;*/
@@ -2007,8 +2015,8 @@ header, .header {
 .contact-block {
     display: flex;
     flex-direction: column;
-    font-size: 3.5rem;
-    line-height: 4rem;
+    font-size: 5rem;
+    line-height: 5.5rem;
 }
 
 /*.contact-block a p {
