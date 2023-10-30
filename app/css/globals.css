@@ -450,6 +450,11 @@ header, .header {
     margin-right: 4rem;
 }
 
+.header-nav-block {
+    display: inline-flex;
+    width: 100%;
+}
+
 .header-nav {
     display: flex;
     justify-content: space-between;
