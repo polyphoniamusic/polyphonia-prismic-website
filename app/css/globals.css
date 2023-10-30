@@ -454,9 +454,9 @@ header, .header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    animation: opacityEntry 1s ease-in-out forwards;
+    /*animation: opacityEntry 1s ease-in-out forwards;*/
     animation-delay: 1s;
-    opacity: 0;
+    opacity: 1;
 }
 
 @keyframes opacityEntry {
@@ -2004,32 +2004,25 @@ header, .header {
     font-family: var(--font-space-grotesk);
 }
 
-.contact-container-block {
-    display: block;
-    text-transform: uppercase;
-    font-family: var(--font-space-grotesk);
-    font-size: 4vw;
-    word-wrap: anywhere;
-}
-
 .contact-block {
-    text-transform: uppercase;
-    font-family: var(--font-space-grotesk);
-    font-size: 3.25vw;
-    display: block ruby;
+    display: flex;
+    flex-direction: column;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
 }
 
-.contact-block a p {
+/*.contact-block a p {
     display: block ruby;
-}
+}*/
 
-.contact-block-type {
+/*.contact-block-type {
     margin-right: 3rem;
-}
+}*/
 
 .contact-block-email {
-    margin-right: 3rem;
+    /*margin-right: 3rem;*/
     transition: all .5s ease-in-out;
+    word-wrap: anywhere;
 }
 
 .contact-block-email:hover {
@@ -2920,7 +2913,8 @@ footer {
     .booking-heading,
     .contact-heading,
     .blog-heading,
-    .article-heading {
+    .article-heading,
+    .contact-block {
         font-size: 14vw;
         max-width: max-content;
         word-break: normal;

@@ -100,7 +100,7 @@ export default function RootLayout({
                 initial={{translateY: 0}}
                 animate={{translateY: -100 + 'svh'}}
                 exit={{translateY:  0}}
-                transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}>
+                transition={{duration: 0.5, ease: [0.22, 1, 0.36, 1]}}>
                   <Loader/>
               </motion.div>
             </motion.div>

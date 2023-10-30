@@ -23,20 +23,18 @@ const ContactSection = ({ slice }: ContactSectionProps): JSX.Element => {
             <h1 className="contact-heading">{children}</h1>
           )
         }}/>
-        <div className="contact-container-block">
-          {slice.items.map(({type, label, email}) => (
-            <>
-              <div className="contact-block">
-                <PrismicRichText field={type} components={{
-                  paragraph: ({children}) =>(
-                    <h1 className="contact-block-type">{children}</h1>
-                  )
-                }}/>
-                <PrismicNextLink field={email} className="contact-block-email">{label}</PrismicNextLink>
-              </div>  
-            </>
-          ))}
-        </div>
+        {slice.items.map(({type, label, email}) => (
+          <>
+            <div className="contact-block">
+              <PrismicRichText field={type} components={{
+                paragraph: ({children}) =>(
+                  <h1 className="contact-block-type">{children}</h1>
+                )
+              }}/>
+              <PrismicNextLink field={email} className="contact-block-email">{label}</PrismicNextLink>
+            </div>  
+          </>
+        ))}
       </div>
     </section>
   );
