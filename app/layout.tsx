@@ -4,8 +4,10 @@ import type { Metadata, ResolvingMetadata } from 'next'
 import './css/globals.css'
 import clsx from 'clsx'
 import 'styled-jsx/style';
+import { useEffect, useRef, useState } from 'react';
 
-import { useEffect, useState } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger'; // Assurez-vous d'importer ScrollTrigger // Importez ScrollSmoother
 
 // Import Priscmic Data Client
 import { createClient } from '@/prismicio'
@@ -65,49 +67,51 @@ const poppins = Poppins({
   }
 }*/
 
+//gsap.registerPlugin(ScrollTrigger);
+
 // Route Layout
 export default function RootLayout({
-  
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
+  /*const containerRef = useRef<HTMLDivElement>(null);
 
-  /*useEffect(() => {
-    initLocomotiveScroll();
+  useEffect(() => {
+    const container = containerRef.current;
+    if (container) {
+      gsap.to(container, {
+        y: -(container.clientHeight - window.innerHeight),
+        scrollTrigger: {
+          trigger: document.body,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+        },
+      });
+    }
   }, []);*/
-  
-  // Locomotive Scroll Implementation
-  /*useEffect( () => {
-    (
-      async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
-      }
-    )()
-  }, [])*/
 
   return (
-   
-      <html lang="en" className={clsx(spaceGrotesk.variable, poppins.variable, n27Regular.variable)}>
-        <body data-scroll-container>
-          <AnimatePresence mode="wait">
-            <motion.div>
-              <CustomCursor/>
-              <Header/>
-              {children}
-              <Footer/>
-              <motion.div 
-                className="slide-in"
-                initial={{translateY: 0}}
-                animate={{translateY: -100 + 'svh'}}
-                exit={{translateY:  0}}
-                transition={{duration: 0.5, ease: [0.22, 1, 0.36, 1]}}>
-                  <Loader/>
-              </motion.div>
+    <html lang="en" className={clsx(spaceGrotesk.variable, poppins.variable, n27Regular.variable)}>
+      <body> {/* <div ref={containerRef}> */}
+        <AnimatePresence mode="wait">
+          <motion.div >
+            <CustomCursor />
+            <Header />
+            {children}
+            <Footer />
+            <motion.div
+              className="slide-in"
+              initial={{ translateY: 0 }}
+              animate={{ translateY: -100 + 'svh' }}
+              exit={{ translateY: 0 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
+              <Loader />
             </motion.div>
-          </AnimatePresence>
-        </body>
-      </html>
-  )
+          </motion.div>
+        </AnimatePresence>
+      </body>
+    </html>
+  );
 }
