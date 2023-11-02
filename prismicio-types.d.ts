@@ -19,8 +19,7 @@ interface ArticlepageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<ArticlepageDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<ArticlepageDocumentDataSlicesSlice> /**
    * Meta Description field in *ArticlePage*
    *
    * - **Field Type**: Text
@@ -88,8 +87,7 @@ interface ArtistpageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<ArtistpageDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<ArtistpageDocumentDataSlicesSlice> /**
    * Meta Description field in *ArtistPage*
    *
    * - **Field Type**: Text
@@ -171,8 +169,7 @@ interface HomepageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice> /**
    * Meta Title field in *HomePage*
    *
    * - **Field Type**: Text
@@ -247,8 +244,7 @@ interface PageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
    * Meta Title field in *Page*
    *
    * - **Field Type**: Text
@@ -1021,12 +1017,12 @@ export interface ArtistsSectionSliceDefaultItem {
   /**
    * Page Link field in *ArtistsSection → Items*
    *
-   * - **Field Type**: Content Relationship
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: artists_section.items[].page_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  page_link: prismic.ContentRelationshipField<"artistpage">;
+  page_link: prismic.LinkField;
 }
 
 /**
@@ -1183,12 +1179,12 @@ export interface BlogSectionSliceDefaultItem {
   /**
    * Link field in *BlogSection → Items*
    *
-   * - **Field Type**: Content Relationship
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: blog_section.items[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  link: prismic.ContentRelationshipField<"articlepage">;
+  link: prismic.LinkField;
 }
 
 /**
@@ -2277,7 +2273,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 
@@ -2297,6 +2293,11 @@ declare module "@prismicio/client" {
       PageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
+      SettingsDocumentDataNavigationItem,
+      SettingsDocumentDataSocialNavigationItem,
+      SettingsDocumentDataFooterNavigationSocialsItem,
+      SettingsDocumentDataFooterNavigationMoreItem,
+      SettingsDocumentDataLegalItem,
       AllDocumentTypes,
       ArticleSectionSlice,
       ArticleSectionSliceDefaultPrimary,

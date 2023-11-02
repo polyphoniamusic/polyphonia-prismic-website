@@ -66,8 +66,8 @@
 						{
 							"__TYPE__": "LinkContent",
 							"value": {
-								"__TYPE__": "DocumentLink",
-								"id": "mock_document_id"
+								"__TYPE__": "ExternalLink",
+								"url": "https://prismic.io"
 							}
 						}
 					]
