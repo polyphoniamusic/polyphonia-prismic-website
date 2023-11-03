@@ -2506,7 +2506,7 @@ footer {
 
 
 .brandassets-container-block-item-image-block {
-    height: 115px;
+    max-height: 115px;
     width: 100%;
 }
 .brandassets-container-block-item-image-block img {
@@ -2965,6 +2965,14 @@ footer {
         max-width: max-content;
         word-break: normal;
         line-height: 12vw;
+    }
+    /* BRAND ASSETS */
+    .brandassets-container-block {
+        display: flex;
+        flex-direction: column;
+    }
+    .brandassets-container-block-item {
+        width: unset;
     }
 }
 
