@@ -62,8 +62,7 @@
           "type": "Link",
           "config": {
             "label": "Page Link",
-            "placeholder": "",
-            "select": null
+            "select": "document"
           }
         }
       }

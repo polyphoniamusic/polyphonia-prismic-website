@@ -288,6 +288,7 @@ li {
 .button-cta {
     display: inline-flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 1.5rem;
     line-height: 2.25rem;
@@ -2490,6 +2491,54 @@ footer {
     font-family: var(--font-space-grotesk);
 }
 
+.brandassets-container-block {
+    display: inline-flex;
+    gap: 5rem;
+}
+
+.brandassets-container-block-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 3rem;
+    width: 400px;
+}
+
+
+.brandassets-container-block-item-image-block {
+    height: 115px;
+    width: 100%;
+}
+.brandassets-container-block-item-image-block img {
+    height: 100%;
+    width: auto;
+}
+
+.brandassets-container-block-item p {
+    text-transform: uppercase;
+    font-family: var(--font-space-grotesk);
+    font-size: 1.25rem;
+}
+
+.brandassets-container-block-item-buttons-block {
+    display: inline-flex;
+    gap: 2rem;
+}
+
+.brandassets-download-button img {
+    color: transparent;
+    height: 1.15rem;
+    width: auto;
+    transform: rotate(180deg);
+    margin-left: 0.5rem;
+    transition: all .2s ease-in-out;
+}
+
+.brandassets-download-button:hover img {
+    filter: invert(1);
+}
+
+
 /* ---------- BREAK POINTS / MEDIA QUERIES ---------- */
 @media only screen and (max-width: 1450px) {
     /*.spotlight-button {
@@ -2551,6 +2600,12 @@ footer {
         min-height: auto;
         width: 100%;
     }*/
+    /* BRAND ASSETS */
+    .brandassets-container-block {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 5rem;
+    }
 }
 
 

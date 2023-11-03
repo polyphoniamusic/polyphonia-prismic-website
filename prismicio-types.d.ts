@@ -1017,12 +1017,12 @@ export interface ArtistsSectionSliceDefaultItem {
   /**
    * Page Link field in *ArtistsSection → Items*
    *
-   * - **Field Type**: Link
+   * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
    * - **API ID Path**: artists_section.items[].page_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  page_link: prismic.LinkField;
+  page_link: prismic.ContentRelationshipField;
 }
 
 /**
@@ -1179,12 +1179,12 @@ export interface BlogSectionSliceDefaultItem {
   /**
    * Link field in *BlogSection → Items*
    *
-   * - **Field Type**: Link
+   * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
    * - **API ID Path**: blog_section.items[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  link: prismic.LinkField;
+  link: prismic.ContentRelationshipField;
 }
 
 /**
