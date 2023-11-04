@@ -83,10 +83,10 @@ const BrandAssetsSection = ({
           {logos.map((logo, index) => (
             <div className="brandassets-container-block-item" key={index}>
               {/* Affichez l'image */}
+              <p>{logo.name}</p>
               <div className="brandassets-container-block-item-image-block">
                 <Image src={logo.imageSVG} alt={'Polyphonia ' + logo.name} width={100} height={100} />
               </div>
-              <p>{logo.name}</p>
               {/* Créez un bouton de téléchargement pour le logo actuel */}
               <div className="brandassets-container-block-item-buttons-block">
                 <button className="button-cta button-cta-white brandassets-download-button" onClick={() => handleDownload(logo.imageSVG.src, logo.downloadNameSVG)}>

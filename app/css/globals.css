@@ -2500,7 +2500,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 3rem;
+    gap: 2rem;
     width: 400px;
 }
 
@@ -2508,9 +2508,9 @@ footer {
 .brandassets-container-block-item-image-block {
     max-height: 115px;
     width: 100%;
+    display: flex;
 }
 .brandassets-container-block-item-image-block img {
-    height: 100%;
     width: auto;
 }
 
