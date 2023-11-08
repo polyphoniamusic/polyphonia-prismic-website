@@ -20,19 +20,22 @@ export default function Header({settings} : { settings: any}) {
     useEffect(() => {
         // Create your GSAP animation
         const showAnim = gsap.from('.header-nav-block, .header-nav-mobile', {
-            yPercent: -200,
-            paused: true,
-            duration: 0.35,
+          //"background-color": "black !important",
+          yPercent: -200,
+          paused: true,
+          duration: 0.35,
         }).progress(1);
-
+      
         ScrollTrigger.create({
-            start: 'top top',
-            end: 99999,
-            onUpdate: (self) => {
-                self.direction === -1 ? showAnim.play() : showAnim.reverse();
-            }
+          start: '50 top',
+          end: 'bottom 50',
+          scrub: 0.5,
+          onUpdate: (self) => {
+            self.direction === -1 ? showAnim.play() : showAnim.reverse();
+          },
+          toggleClass: {targets: ".header-nav-block, .header-nav-mobile", className: "header-nav-scrolled"},  // Remplacez 'your-class-name' par le nom de la classe que vous souhaitez ajouter
         });
-    }, []); 
+      }, []);
 
     const [menuIsOpen, setMenuIsOpen] = useState(false);
 

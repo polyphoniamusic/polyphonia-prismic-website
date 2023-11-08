@@ -437,7 +437,6 @@ header, .header {
     margin: auto;
     display: flex;
     align-items: center;
-    mix-blend-mode: difference;
 }
 
 .header-container-mobile {
@@ -462,6 +461,17 @@ header, .header {
 .header-nav-block {
     display: inline-flex;
     width: 100%;
+    /*filter: invert(1);*/
+    border-radius: 2rem;
+    transition: padding 0.2s ease-in-out, background 0.2s ease-in-out;
+    transition-delay: 0.3s;
+}
+
+.header-nav-scrolled {
+    padding: 20px var(--container-padding);
+    border-radius: 2rem;
+    transition: .2 all ease-in-out;
+    background: var(--color-background);
 }
 
 .header-nav {
@@ -471,6 +481,7 @@ header, .header {
     /*animation: opacityEntry 1s ease-in-out forwards;*/
     animation-delay: 1s;
     opacity: 1;
+    align-items: center;
 }
 
 @keyframes opacityEntry {
@@ -594,6 +605,10 @@ header, .header {
     animation-delay: 1s;
     opacity: 0;
     display: inline-flex;
+    align-items: center;
+    border-radius: 2rem;
+    transition: padding 0.2s ease-in-out, background 0.2s ease-in-out;
+    transition-delay: 0.3s;
 }
 
 .header-nav-mobile-button {
@@ -2792,6 +2807,13 @@ footer {
 }
 
 @media only screen and (max-width: 700px) {
+    /* HEADER */
+    .header-nav-scrolled {
+        padding: 20px var(--container-padding);
+        border-radius: 2rem;
+        transition: .2 all ease-in-out;
+        background: var(--color-background);
+    }
     /* SHOWROLL */
     .showroll-container {
         font-size: 9vw;
