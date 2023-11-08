@@ -347,6 +347,14 @@ li {
     /*filter: drop-shadow(0px 50px 0px var(--color-primary));*/
 }
 
+.maxWidth1050 {
+    display: none;
+}
+
+.minWidth1050 {
+    display: flex;
+}
+
 section:first-of-type {
     padding-top: calc(60px + var(--container-padding));
 }
@@ -2623,6 +2631,13 @@ footer {
 }
 
 @media only screen and (max-width: 1050px) {
+    /* MAIN */
+    .minWidth1050 {
+        display: none;
+    }
+    .maxWidth1050 {
+        display: flex;
+    }
     /* HEADER */
     .header-container {
         /*animation: fadeOutAndHide 0.2s ease-in-out forwards;*/

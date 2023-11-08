@@ -5,12 +5,12 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import gsap from 'gsap';
 
-import { useMatchMedia } from "@/app/components/useMatchMedia";
+//import { useMatchMedia } from "@/app/components/useMatchMedia";
 import { PrismicNextLink, PrismicNextImage  } from '@prismicio/next';
 
 export default function link({data, index}) {
 
-    const isDesktopResolution = useMatchMedia("(min-width:1050px)", true);
+    //const isDesktopResolution = useMatchMedia("(min-width:1050px)", true);
 
     const { label, link, monogram, icon } = data;
     const outer = useRef(null);
@@ -53,12 +53,8 @@ export default function link({data, index}) {
             {icon ? 
                 (
                     <PrismicNextLink field={link} >
-                        {isDesktopResolution ? (
-                            <PrismicNextImage width="30" height="30" field={icon}/>
-                        ) : (
-                            <div className="button-cta button-cta-white button-cta-small-padding">{monogram}</div>
-                            )
-                        }
+                            <PrismicNextImage width="30" height="30" field={icon} className="minWidth1050"/>
+                            <div className="button-cta button-cta-white button-cta-small-padding maxWidth1050">{monogram}</div>
                     </PrismicNextLink>
                 ) : (
                     <PrismicNextLink field={link}>
