@@ -461,10 +461,12 @@ header, .header {
 .header-nav-block {
     display: inline-flex;
     width: 100%;
-    /*filter: invert(1);*/
     border-radius: 2rem;
-    transition: padding 0.2s ease-in-out, background 0.2s ease-in-out;
-    transition-delay: 0.3s;
+    filter: invert(0%);
+    transition: padding .2s ease-in-out,
+                background .2s ease-in-out,
+                filter .2s ease-in-out;
+    transition-delay: .3s;
 }
 
 .header-nav-scrolled {
@@ -472,6 +474,8 @@ header, .header {
     border-radius: 2rem;
     transition: .2 all ease-in-out;
     background: var(--color-background);
+    filter: invert(1);
+    
 }
 
 .header-nav {
