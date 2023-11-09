@@ -601,7 +601,7 @@ header, .header {
     opacity: 0;
     display: inline-flex;
     align-items: center;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     filter: invert(0%);
     transition: padding .2s ease-in-out,
                 background .2s ease-in-out,
