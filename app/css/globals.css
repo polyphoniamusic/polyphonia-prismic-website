@@ -469,15 +469,6 @@ header, .header {
     transition-delay: .3s;
 }
 
-.header-nav-scrolled {
-    padding: 20px var(--container-padding);
-    border-radius: 2rem;
-    transition: .2 all ease-in-out;
-    background: var(--color-background);
-    filter: invert(1);
-    
-}
-
 .header-nav {
     display: flex;
     justify-content: space-between;
@@ -611,8 +602,20 @@ header, .header {
     display: inline-flex;
     align-items: center;
     border-radius: 2rem;
-    transition: padding 0.2s ease-in-out, background 0.2s ease-in-out;
-    transition-delay: 0.3s;
+    filter: invert(0%);
+    transition: padding .2s ease-in-out,
+                background .2s ease-in-out,
+                filter .2s ease-in-out;
+    transition-delay: .3s;
+}
+
+.header-nav-scrolled {
+    padding: 20px var(--container-padding);
+    border-radius: 2rem;
+    transition: .2 all ease-in-out;
+    background: var(--color-background);
+    filter: invert(1);
+    
 }
 
 .header-nav-mobile-button {
@@ -2813,10 +2816,7 @@ footer {
 @media only screen and (max-width: 700px) {
     /* HEADER */
     .header-nav-scrolled {
-        padding: 20px var(--container-padding);
         border-radius: 1.5rem;
-        transition: .2 all ease-in-out;
-        background: var(--color-background);
     }
     /* SHOWROLL */
     .showroll-container {
