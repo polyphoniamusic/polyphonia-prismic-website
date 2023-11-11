@@ -13,9 +13,15 @@ export const repositoryName = config.repositoryName;
  * {@link https://prismic.io/docs/route-resolver#route-resolver}
  */
 
-const routes: prismic.ClientConfig["routes"] = [
-  {
+
+const routes: prismic.ClientConfig['routes'] = [
+  /*{
     type: 'homepage',
+    path: '/:lang?',
+  },*/
+  {
+    type: 'page',
+    uid: 'home',
     path: '/:lang?',
   },
   {
