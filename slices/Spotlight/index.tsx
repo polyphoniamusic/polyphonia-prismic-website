@@ -86,30 +86,34 @@ const Spotlight = ({ slice }: SpotlightProps): JSX.Element => {
                         </div>
                       </div>
                       <div className="spotlight-infos">
-                        <PrismicRichText field={ep_release} components={{
+                        <PrismicRichText field={title} components={{
                           paragraph: ({ children }) => (
-                            <p className="spotlight-category spotlight-category-ep">{children}</p>
-                          )
-                        }} />
-                        <PrismicRichText field={album_release} components={{
-                          paragraph: ({ children }) => (
-                            <p className="spotlight-category spotlight-category-album">{children}</p>
-                          )
-                        }} />
-                        <PrismicRichText field={single_release} components={{
-                          paragraph: ({ children }) => (
-                            <p className="spotlight-category spotlight-category-single">{children}</p>
+                            <>
+                              <span className="spotlight-title">
+                                <PrismicRichText field={ep_release} components={{
+                                  paragraph: ({ children }) => (
+                                    <span className="spotlight-category spotlight-category-ep">{children}</span>
+                                  )
+                                }} />
+                                <PrismicRichText field={album_release} components={{
+                                  paragraph: ({ children }) => (
+                                    <span className="spotlight-category spotlight-category-album">{children}</span>
+                                  )
+                                }} />
+                                <PrismicRichText field={single_release} components={{
+                                  paragraph: ({ children }) => (
+                                    <span className="spotlight-category spotlight-category-single">{children}</span>
+                                  )
+                                }} />
+                                {children}
+                              </span>
+                            </>
                           )
                         }} />
                         <div className="spotlight-artist-infos">
                           <PrismicRichText field={artistname} components={{
                             paragraph: ({ children }) => (
-                              <p className="spotlight-name">{children}</p>
-                            )
-                          }} />
-                          <PrismicRichText field={title} components={{
-                            paragraph: ({ children }) => (
-                              <p className="spotlight-title">{children}</p>
+                              <span className="spotlight-name">{children}</span>
                             )
                           }} />
                         </div>

@@ -511,6 +511,7 @@ header, .header {
     display: inline-flex;
     overflow: hidden;
     height: 1.75rem;
+    gap: 1.75rem;
 }
 
 .header-nav-button {
@@ -559,14 +560,6 @@ header, .header {
 
 .header-nav-button:hover .arrow {
     transform: translateY(50px) rotate(45deg);
-}
-
-.header-nav-link {
-    margin-left: 1.75rem;
-}
-
-.header-nav-link:first-child {
-    margin-left: 0;
 }
 
 .header-nav-link > div a {
@@ -643,6 +636,37 @@ header, .header {
     justify-content: start;
     gap: 10px;
 }
+
+.header-lang-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-lang-button {
+    width: 1.75rem;
+}
+
+.header-lang-block {
+    visibility: hidden;
+    opacity: 0;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    transition: all .2s ease-in-out;
+    font-size: 1.25rem;
+}
+
+.header-lang-container:hover .header-lang-block {
+    visibility: visible;
+    opacity: 1;
+    display: inline-flex;
+}
+
+.header-lang-block-item {
+
+}
+
+
 
 .visible {
     opacity: 1;
@@ -979,9 +1003,10 @@ header, .header {
 }
 
 .spotlight-infos {
-    display: inline-flex;
+    display: flex;
     font-size: 1.5rem;
     margin-top: 1rem;
+    flex-direction: column;
 }
 
 .spotlight-category {
@@ -1026,12 +1051,13 @@ header, .header {
 }
 
 .spotlight-artist-infos {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
 }
 
-.spotlight-name::after {
-    content: '—';
-    margin: 0 0.5rem;
+.spotlight-name::before {
+    content: 'by';
+    margin: 0 0.5rem 0 0;
 }
 
 /* ---------- SHOWROLL ---------- */

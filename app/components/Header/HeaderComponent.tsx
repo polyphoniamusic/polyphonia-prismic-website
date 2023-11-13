@@ -28,7 +28,7 @@ export default function Header({settings} : { settings: any}) {
       
         ScrollTrigger.create({
           start: '50 top',
-          end: 'bottom 50',
+          end: '99999999',
           scrub: 0.5,
           onUpdate: (self) => {
             self.direction === -1 ? showAnim.play() : showAnim.reverse();
