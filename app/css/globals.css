@@ -2941,10 +2941,10 @@ footer {
     /*.spotlight-infos {
         display: flex;
         flex-direction: column-reverse;
-    }*/
+    }
     .spotlight-category::before {
         content: none;
-    }
+    }*/
     /* NEWSLETTER */
     .newsletter-input {
         margin: 0 0 var(--section-padding) 0;
