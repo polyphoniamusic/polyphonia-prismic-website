@@ -19,7 +19,7 @@ const Releases = ({ slice }: ReleasesProps): JSX.Element => {
       <div className="releases-container">
         <PrismicRichText field={slice.primary.heading} components={{
           paragraph: ({children}) =>(
-            <h1 className="releases-heading">{children}</h1>
+            <h1 className="releases-heading">Releases</h1>
           )
         }}/>
           <div className="releases-container-block">

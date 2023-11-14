@@ -2595,6 +2595,17 @@ footer {
     filter: invert(1);
 }
 
+/* ---------- BREAK POINTS / MEDIA QUERIES ---------- */
+@media only screen and (max-width: 1900px) {
+    /* BLOG */
+    .blog-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+        /*grid-gap: calc(var(--container-padding)*2) var(--container-padding);*/
+        grid-gap: 4rem var(--container-padding);
+    }
+}
+
 
 /* ---------- BREAK POINTS / MEDIA QUERIES ---------- */
 @media only screen and (max-width: 1450px) {
