@@ -90,6 +90,7 @@ const Spotlight = ({ slice }: SpotlightProps): JSX.Element => {
                           paragraph: ({ children }) => (
                             <>
                               <span className="spotlight-title">
+                                {children}
                                 <PrismicRichText field={ep_release} components={{
                                   paragraph: ({ children }) => (
                                     <span className="spotlight-category spotlight-category-ep">{children}</span>
@@ -105,7 +106,6 @@ const Spotlight = ({ slice }: SpotlightProps): JSX.Element => {
                                     <span className="spotlight-category spotlight-category-single">{children}</span>
                                   )
                                 }} />
-                                {children}
                               </span>
                             </>
                           )

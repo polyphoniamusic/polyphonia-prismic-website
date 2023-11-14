@@ -1017,7 +1017,7 @@ header, .header {
 
 .spotlight-category::before {
     content: '•';
-    margin: 0 0.5rem 0 0;
+    margin: 0 0.5rem;
 }
 
 .spotlight-category-single {
@@ -2938,10 +2938,10 @@ footer {
         transform: translateY(3vw) rotate(45deg);
     }
     /* SPOTLIGHT */
-    .spotlight-infos {
+    /*.spotlight-infos {
         display: flex;
         flex-direction: column-reverse;
-    }
+    }*/
     .spotlight-category::before {
         content: none;
     }
