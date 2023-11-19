@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/AudioWaveform.js", "@prismicio/client.d.ts", "app/page.tsx", "app/[uid]/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/AudioWaveform.js", "@prismicio/client.d.ts", "app/page [saved].tsx", "app/[uid]/page.jsx"],
   "exclude": ["node_modules"],
 }

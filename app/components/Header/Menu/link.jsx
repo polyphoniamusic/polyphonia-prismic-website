@@ -8,7 +8,7 @@ import gsap from 'gsap';
 //import { useMatchMedia } from "@/app/components/useMatchMedia";
 import { PrismicNextLink, PrismicNextImage  } from '@prismicio/next';
 
-export default function link({data, index}) {
+export default function link({data, index }) {
 
     //const isDesktopResolution = useMatchMedia("(min-width:1050px)", true);
 

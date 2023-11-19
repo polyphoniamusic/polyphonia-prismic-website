@@ -6,9 +6,6 @@ import clsx from 'clsx'
 import 'styled-jsx/style';
 import { useEffect, useRef, useState } from 'react';
 
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger'; // Assurez-vous d'importer ScrollTrigger // Importez ScrollSmoother
-
 // Import Priscmic Data Client
 import { createClient } from '@/prismicio'
 
@@ -98,9 +95,7 @@ export default function RootLayout({
         <AnimatePresence mode="wait">
           <motion.div >
             <CustomCursor />
-            <Header />
             {children}
-            <Footer />
             <motion.div
               className="slide-in"
               initial={{ translateY: 0 }}

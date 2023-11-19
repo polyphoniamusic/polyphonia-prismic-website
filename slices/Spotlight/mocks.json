@@ -146,6 +146,14 @@
 								}
 							]
 						}
+					],
+					[
+						"by_artist",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "favorite",
+							"type": "Text"
+						}
 					]
 				]
 			}

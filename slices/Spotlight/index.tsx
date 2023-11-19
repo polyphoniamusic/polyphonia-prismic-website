@@ -74,7 +74,7 @@ const Spotlight = ({ slice }: SpotlightProps): JSX.Element => {
     >
       <div className="spotlight-container">
           <div className="spotlight-container-block" ref={scroller}>
-            {slice.items.map(({ artistname, ep_release, single_release, album_release, title, link, label, cover }) => (
+            {slice.items.map(({ by_artist, artistname, ep_release, single_release, album_release, title, link, label, cover }) => (
               <div key={label} className="spotlight-block-button skill-set" ref={skills}>
                 <div className="spotlight-button">
                   <PrismicNextLink field={link}>
@@ -111,9 +111,13 @@ const Spotlight = ({ slice }: SpotlightProps): JSX.Element => {
                           )
                         }} />
                         <div className="spotlight-artist-infos">
+                                
                           <PrismicRichText field={artistname} components={{
                             paragraph: ({ children }) => (
-                              <span className="spotlight-name">{children}</span>
+                              <p className="spotlight-name">
+                                <span>{by_artist}</span>
+                                {children}
+                              </p>
                             )
                           }} />
                         </div>

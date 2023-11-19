@@ -9,11 +9,11 @@ import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 import ArrowIcon from '../../public/assets/images/icons/arrow-icon-white.svg';
 
-export default async function Footer() {
+export default async function Footer({ lang, locales }: any) {
 
     const client = createClient();
-  
-    const settings = await client.getSingle("settings");
+
+    const settings = await client.getSingle('settings', { lang });
 
     return (
         <footer>
@@ -62,7 +62,6 @@ export default async function Footer() {
                 </div>
 
                 <div className="footer-block">
-
                     <div className="footer-column-reverse">
                         <PrismicRichText field={settings.data.copyright} components={{
                             paragraph: ({children}) =>(
@@ -76,9 +75,9 @@ export default async function Footer() {
                         ))}
                     </div>
                     <div className="footer-column-reverse">
-                        <a href="/">
+                        <PrismicNextLink field={settings.data.site_home_url}>
                             <PrismicNextImage field={settings.data.site_logo} className="site-logo footer-logo"/>
-                        </a>
+                        </PrismicNextLink>
                     </div>
                 </div>
                 

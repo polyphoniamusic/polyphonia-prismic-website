@@ -26,6 +26,13 @@
             "placeholder": ""
           }
         },
+        "written_by": {
+          "type": "Text",
+          "config": {
+            "label": "Written By",
+            "placeholder": ""
+          }
+        },
         "author": {
           "type": "Text",
           "config": {

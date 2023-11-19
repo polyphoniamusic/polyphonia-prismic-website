@@ -33,7 +33,7 @@ const ArticleSection = ({ slice }: ArticleSectionProps): JSX.Element => {
           </p>
           <h1 className="article-heading">{slice.primary.heading}</h1>
           <p className="article-data">
-            <span>Written by {slice.primary.author}</span>
+            <span>{slice.primary.written_by} {slice.primary.author}</span>
             <span>{formattedDate}</span>
             <span>{slice.primary.duration}</span>
           </p>

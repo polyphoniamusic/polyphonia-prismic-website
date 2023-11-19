@@ -505,6 +505,17 @@ interface SettingsDocumentData {
   site_logo: prismic.ImageField<never>;
 
   /**
+   * Site Home Url field in *Settings*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.site_home_url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  site_home_url: prismic.LinkField;
+
+  /**
    * Navigation field in *Settings*
    *
    * - **Field Type**: Group
@@ -623,6 +634,16 @@ export interface ArticleSectionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   sub_heading: prismic.KeyTextField;
+
+  /**
+   * Written By field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.written_by
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  written_by: prismic.KeyTextField;
 
   /**
    * Author field in *ArticleSection → Primary*
@@ -1782,6 +1803,16 @@ export interface NewsletterSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   label: prismic.KeyTextField;
+
+  /**
+   * Link field in *Newsletter → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: newsletter.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
 }
 
 /**
@@ -2092,6 +2123,16 @@ export interface SpotlightSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   title: prismic.RichTextField;
+
+  /**
+   * by Artist field in *Spotlight → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: spotlight.items[].by_artist
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  by_artist: prismic.KeyTextField;
 
   /**
    * ArtistName field in *Spotlight → Items*

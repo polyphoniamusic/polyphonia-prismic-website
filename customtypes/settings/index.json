@@ -44,6 +44,14 @@
           "thumbnails": []
         }
       },
+      "site_home_url": {
+        "type": "Link",
+        "config": {
+          "label": "Site Home Url",
+          "placeholder": "",
+          "select": null
+        }
+      },
       "navigation": {
         "type": "Group",
         "config": {

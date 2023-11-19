@@ -6,7 +6,9 @@ import styles from './style.module.scss';
 import Link from './link';
 import { useState } from 'react';
 
-export default function index({ closeMenu, settings }) {
+import { LanguageSwitcher } from '@/app/components/LanguageSwitcher';
+
+export default function index({ closeMenu, settings, locales }) {
 
   return (
     <motion.div className={styles.menu} variants={opacity} initial="initial" animate="enter" exit="exit">
@@ -17,6 +19,7 @@ export default function index({ closeMenu, settings }) {
                   <Link data={item} index={index} key={index}/>
                 </button>
             ))}
+            <LanguageSwitcher locales={locales} />
           </div>
           <button onClick={() => {closeMenu()}}>
             <motion.svg 

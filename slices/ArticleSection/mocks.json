@@ -83,6 +83,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "at",
 				"type": "Text"
+			},
+			"written_by": {
+				"__TYPE__": "FieldContent",
+				"value": "thou",
+				"type": "Text"
 			}
 		},
 		"items": []

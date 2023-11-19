@@ -19,8 +19,10 @@ const Newsletter = ({ slice }: NewsletterProps): JSX.Element => {
       <div className="newsletter-container">
         <h1 className="newsletter-heading">{slice.primary.heading}</h1>
         <div className="newsletter-block">
-          <input type="email" className="newsletter-input" placeholder="Your email"></input>
+          {/*<input type="email" className="newsletter-input" placeholder="Your email"></input>
           <button className="button-cta button-cta-black">{slice.primary.label}</button>
+          */}
+          <PrismicNextLink field={slice.primary.link} className="button-cta button-cta-black">{slice.primary.label}</PrismicNextLink>
         </div>
 
       </div>
