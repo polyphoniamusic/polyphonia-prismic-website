@@ -34,13 +34,22 @@ export async function generateMetadata({
   params: Params;
 }): Promise<Metadata> {
   const client = createClient();
+
   const articlepage = await client
-    .getByUID("articlepage", params.uid)
+    .getByUID('articlepage', params.uid, { lang: params.lang })
     .catch(() => notFound());
 
   return {
     title: articlepage.data.meta_title,
     description: articlepage.data.meta_description,
+    openGraph: {
+      title: articlepage.data.meta_title || undefined,
+      images: [
+        {
+          url: articlepage.data.meta_image.url || '',
+        },
+      ],
+    },
   };
 }
 
