@@ -5,74 +5,177 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://polyphoniamusic.com/</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://polyphoniamusic.com/</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/artists</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/tour</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://polyphoniamusic.com/tour</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/blog</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://polyphoniamusic.com/blog</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/contact</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://polyphoniamusic.com/contact</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/artists/blurblur</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://polyphoniamusic.com/fr-fr</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/artists/vonderval</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://polyphoniamusic.com/artists/blurblur</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/artists/sven</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://polyphoniamusic.com/artists/vonderval</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/artists/haydenbesswood</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://polyphoniamusic.com/artists/sven</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/label</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://polyphoniamusic.com/artists/haydenbesswood</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/brand-assets</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://polyphoniamusic.com/artists/coconut</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/privacy</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://polyphoniamusic.com/label</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/blog/spotify-new-feature-discovery-mode</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://polyphoniamusic.com/brand-assets</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://polyphoniamusic.com/blog/blurblur-new-release-august27</loc>
-  <lastmod>2023-10-26T14:45:46+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://polyphoniamusic.com/privacy</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://polyphoniamusic.com/fr-fr/artists</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://polyphoniamusic.com/fr-fr/tour</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://polyphoniamusic.com/fr-fr/blog</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>
+https://polyphoniamusic.com/blog/deezer-new-visual-identity
+</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>
+https://polyphoniamusic.com/blog/spotify-artists-new-feature-discovery-mode
+</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://polyphoniamusic.com/fr-fr/contact</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://polyphoniamusic.com/fr-fr/artists/blurblur</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>
+https://polyphoniamusic.com/fr-fr/artists/vonderval
+</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://polyphoniamusic.com/fr-fr/artists/sven</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>
+https://polyphoniamusic.com/fr-fr/artists/haydenbesswood
+</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://polyphoniamusic.com/fr-fr/artists/coconut</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://polyphoniamusic.com/fr-fr/label</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://polyphoniamusic.com/fr-fr/brand-assets</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://polyphoniamusic.com/fr-fr/privacy</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>
+https://polyphoniamusic.com/fr-fr/blog/deezer-new-visual-identity
+</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>
+https://polyphoniamusic.com/fr-fr/blog/spotify-artists-new-feature-discovery-mode
+</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>
+https://polyphoniamusic.com/fr-fr/blog/blurblur-new-release-august27
+</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>
+https://polyphoniamusic.com/blog/blurblur-new-release-august27
+</loc>
+<lastmod>2023-11-20T14:09:58+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 
 
