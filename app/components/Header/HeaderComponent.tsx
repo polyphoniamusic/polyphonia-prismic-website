@@ -55,7 +55,7 @@ export default function HeaderComponent({ settings, locales }: { settings: any; 
                           <ul className="header-nav-menu">
                               {settings.data.navigation.map((item: { label: Key | null | undefined; }, index: Key | null | undefined) => (
                                   <li className="header-nav-button" key={item.label}>
-                                      <Link data={item} index={index} key={index} locales={locales}/>
+                                      <Link data={item} index={index} key={index}/>
                                   </li>
                               ))}
                           </ul>
