@@ -17,7 +17,7 @@ export async function generateMetadata({
   try {
     const client = createClient();
     // ⬇️ Note this line with the `lang` parameter being passed in
-    const home = await client.getSingle('homepage');
+    const home = await client.getSingle('homepage', { lang });
 
     return {
       title: home.data.meta_title,
@@ -37,6 +37,7 @@ export async function generateMetadata({
     throw err;
   }
 }
+
 
 export default async function Index({
   params: { lang },
