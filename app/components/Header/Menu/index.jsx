@@ -1,9 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { opacity, slideLeft, mountAnim } from '../anim';
+import { opacity, slideLeft, mountAnim, rotateX } from '../anim';
 import styles from './style.module.scss';
 import Link from './link';
+
+import { LanguageSwitcher } from '@/app/components/LanguageSwitcher';
 
 export default function index({ closeMenu, settings, locales }) {
 
@@ -11,11 +13,20 @@ export default function index({ closeMenu, settings, locales }) {
     <motion.div className={styles.menu} variants={opacity} initial="initial" animate="enter" exit="exit">
         <div className="header-container-mobile">
           <div className="header-container-mobile-socials">
+            <motion.div 
+              variants={rotateX} 
+              {...mountAnim}
+              custom={index} 
+              className={styles.el}>
+              <LanguageSwitcher locales={locales} />
+            </motion.div>
+            <div>
             {settings.data.social_navigation.map((item, index) => (
                 <button onClick={() => {closeMenu()}}>
                   <Link data={item} index={index} key={index} locales={locales}/>
                 </button>
             ))}
+            </div>
           </div>
           <button onClick={() => {closeMenu()}}>
             <motion.svg 

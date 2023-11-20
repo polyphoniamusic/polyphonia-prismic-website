@@ -448,9 +448,10 @@ header, .header {
     mix-blend-mode: difference;
 }
 
-.header-container-mobile-socials button div {
+.header-container-mobile-socials div {
     display: flex;
     align-items: center;
+    gap: 0.4rem;
 }
 
 .header-controls {
@@ -2737,9 +2738,10 @@ footer {
         animation: unset;
     }
     .header-container-mobile-socials {
-        display: inline-flex;
-        gap: 1rem;
+        display: flex;
+        gap: 2.5rem;
         width: 100%;
+        flex-direction: column;
     }
     .header-lang-container {
         flex-direction: row-reverse;
