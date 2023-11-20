@@ -4,9 +4,6 @@ import { motion } from 'framer-motion';
 import { opacity, slideLeft, mountAnim } from '../anim';
 import styles from './style.module.scss';
 import Link from './link';
-import { useState } from 'react';
-
-import { LanguageSwitcher } from '@/app/components/LanguageSwitcher';
 
 export default function index({ closeMenu, settings, locales }) {
 
@@ -16,10 +13,9 @@ export default function index({ closeMenu, settings, locales }) {
           <div className="header-container-mobile-socials">
             {settings.data.social_navigation.map((item, index) => (
                 <button onClick={() => {closeMenu()}}>
-                  <Link data={item} index={index} key={index}/>
+                  <Link data={item} index={index} key={index} locales={locales}/>
                 </button>
             ))}
-            <LanguageSwitcher locales={locales} />
           </div>
           <button onClick={() => {closeMenu()}}>
             <motion.svg 
@@ -36,11 +32,12 @@ export default function index({ closeMenu, settings, locales }) {
           </button>
         </div>
         <div className={styles.body}>
-          {settings.data.navigation.map((item, index) => (
-              <button className="header-line" onClick={() => {closeMenu()}}>
-                <Link data={item} index={index} key={index}/>
-              </button>
-          ))}
+        {settings.data.navigation.map((item, index) => (
+          <button className="header-line" onClick={() => {closeMenu()}}>
+            {/* Pass locales to Link component */}
+            <Link data={item} index={index} key={index} locales={locales} />
+          </button>
+        ))}
         </div>
     </motion.div>
   )

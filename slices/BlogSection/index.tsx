@@ -3,6 +3,9 @@ import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { format } from 'date-fns';
 
+import Image from "next/image";
+import ArrowIconWhite from '@/app/content/images/icons/arrow-icon-white.svg';
+
 /**
  * Props for `BlogSection`.
  */
@@ -52,7 +55,7 @@ const BlogSection = ({ slice }: BlogSectionProps): JSX.Element => {
                         <p className="blog-title">{article.title}</p>
                         <p className="blog-date">{formattedDate}</p>
                       </div>
-                      <p className="blog-button"><span>Read More</span><img className="blog-button-arrow" src="/assets/images/icons/arrow-icon-white.svg"/></p>
+                      <p className="blog-button"><span>Read More</span><Image className="blog-button-arrow" src={ArrowIconWhite} alt="Arrow Icon White"/></p>
                     </div>
                     <PrismicNextImage className="blog-image" field={article.image}/>
                   </PrismicNextLink>

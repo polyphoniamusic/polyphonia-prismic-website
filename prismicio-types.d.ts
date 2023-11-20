@@ -358,6 +358,16 @@ export interface SettingsDocumentDataSocialNavigationItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   monogram: prismic.KeyTextField;
+
+  /**
+   * Language Switcher field in *Settings → Social Navigation*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.social_navigation[].language_switcher
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  language_switcher: prismic.KeyTextField;
 }
 
 /**

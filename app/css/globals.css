@@ -448,6 +448,11 @@ header, .header {
     mix-blend-mode: difference;
 }
 
+.header-container-mobile-socials button div {
+    display: flex;
+    align-items: center;
+}
+
 .header-controls {
     display: inline-flex;
     justify-content: space-between;
@@ -1068,7 +1073,7 @@ header, .header {
     width: 100%;
     display: flex;
     justify-content: center;
-    scroll-margin-top: calc(100svh - 240px);
+    scroll-margin-top: calc(100svh - 256px);
 }
 
 .showroll-container {
@@ -1078,7 +1083,7 @@ header, .header {
     width: 100%;
     display: inline;
     font-size: 3.5rem;
-    line-height: 3rem;
+    line-height: 4rem;
 }
 
 .showroll-heading {
@@ -2199,6 +2204,7 @@ header, .header {
 .blog-button-arrow {
     height: 1rem;
     transform: rotate(45deg);
+    width: max-content;
 }
 
 /* ---------- ARTICLES ---------- */
@@ -2638,7 +2644,7 @@ footer {
     .article-introduction {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-        grid-gap: calc(var(--container-padding)*2) var(--container-padding);
+        grid-gap: 2rem var(--container-padding);
     }
     .article-introduction-block {
         width: 100%;
@@ -2737,6 +2743,9 @@ footer {
     }
     .header-lang-container {
         flex-direction: row-reverse;
+    }
+    .header-lang-button {
+        min-width: 2.75rem;
     }
     /* HERO */
     /*.hero {
@@ -2866,7 +2875,7 @@ footer {
     }
     /* SHOWROLL */
     .showroll-container {
-        font-size: 9vw;
+        font-size: 8vw;
         line-height: 10vw;
         display: flex;
         flex-direction: column;

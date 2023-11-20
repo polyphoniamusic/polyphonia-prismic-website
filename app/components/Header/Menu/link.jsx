@@ -5,14 +5,15 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import gsap from 'gsap';
 
+import { LanguageSwitcher } from '@/app/components/LanguageSwitcher';
+
 //import { useMatchMedia } from "@/app/components/useMatchMedia";
 import { PrismicNextLink, PrismicNextImage  } from '@prismicio/next';
+import ArrowIconWhite from '@/app/content/images/icons/arrow-icon-white.svg';
 
-export default function link({data, index }) {
+export default function link({data, index, locales }) {
 
-    //const isDesktopResolution = useMatchMedia("(min-width:1050px)", true);
-
-    const { label, link, monogram, icon } = data;
+    const { label, language_switcher, link, monogram, icon } = data;
     const outer = useRef(null);
     const inner = useRef(null);
 
@@ -50,21 +51,29 @@ export default function link({data, index }) {
             {...mountAnim}
             custom={index} 
             className={styles.el}>
-            {icon ? 
-                (
-                    <PrismicNextLink field={link} >
-                            <PrismicNextImage width="30" height="30" field={icon} className="minWidth1050"/>
-                            <div className="button-cta button-cta-white button-cta-small-padding maxWidth1050">{monogram}</div>
-                    </PrismicNextLink>
-                ) : (
-                    <PrismicNextLink field={link}>
-                        <div>
-                            {label}
-                            <Image width="30" height="30" className="arrow" alt="Arrow White Icon" src="/assets/images/icons/arrow-icon-white.svg"/>
-                        </div>
-                    </PrismicNextLink>  
-                )
-            }
+                {icon ? 
+                    (
+                        <>
+                            {language_switcher ? (
+                                <LanguageSwitcher locales={locales} />
+                                    ) : (
+                                <PrismicNextLink field={link} >
+                                    <PrismicNextImage width="30" height="30" field={icon} className="minWidth1050"/>
+                                    <div className="button-cta button-cta-white button-cta-small-padding maxWidth1050">{monogram}</div>
+                                </PrismicNextLink>
+                                )
+                            }
+                                
+                        </>
+                    ) : (
+                        <PrismicNextLink field={link}>
+                            <div>
+                                {label}
+                                <Image width="30" height="30" className="arrow" alt="Arrow White Icon" src={ArrowIconWhite}/>
+                            </div>
+                        </PrismicNextLink>  
+                    )
+                }
             <div ref={outer} className={styles.outer}>
                 <div ref={inner} className={styles.inner}>
                     {/*{

@@ -10,8 +10,6 @@ import { useEffect, useRef, useState } from 'react';
 import { createClient } from '@/prismicio'
 
 // Import components
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
 import Loader from '@/app/components/Loader';
 
 // Import UX Components
@@ -57,6 +55,7 @@ const poppins = Poppins({
 
   return {
     title: settings.data.site_title || "POLYPHONIA MUSIC",
+    icon: settings.data.site_icon,
     description: settings.data.meta_description || "The official website of Polyphonia Music, an independant record label based in France empowering artists with comprehensive strategies to develop their career.",    
     openGraph: {
       images: [settings.data.og_image.url || ""],

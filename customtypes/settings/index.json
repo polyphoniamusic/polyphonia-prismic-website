@@ -111,6 +111,13 @@
                 "label": "Monogram",
                 "placeholder": ""
               }
+            },
+            "language_switcher": {
+              "type": "Text",
+              "config": {
+                "label": "Language Switcher",
+                "placeholder": ""
+              }
             }
           }
         }
