@@ -1,13 +1,13 @@
 "use client";
 
+// Import Priscmic Data Client
+import { createClient } from '@/prismicio'
 import type { Metadata, ResolvingMetadata } from 'next'
+
 import './css/globals.css'
 import clsx from 'clsx'
 import 'styled-jsx/style';
-import { useEffect, useRef, useState } from 'react';
 
-// Import Priscmic Data Client
-import { createClient } from '@/prismicio'
 
 // Import components
 import Loader from '@/app/components/Loader';
@@ -92,7 +92,7 @@ export default function RootLayout({
     <html lang="en" className={clsx(spaceGrotesk.variable, poppins.variable, n27Regular.variable)}>
       <body> {/* <div ref={containerRef}> */}
         <AnimatePresence mode="wait">
-          <motion.div >
+          <motion.div>
             <CustomCursor />
             {children}
             <motion.div

@@ -51,6 +51,13 @@
             "label": "Link",
             "select": "document"
           }
+        },
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": ""
+          }
         }
       }
     }

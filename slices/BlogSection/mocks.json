@@ -70,6 +70,14 @@
 								"id": "mock_document_id"
 							}
 						}
+					],
+					[
+						"label",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "roof",
+							"type": "Text"
+						}
 					]
 				]
 			}

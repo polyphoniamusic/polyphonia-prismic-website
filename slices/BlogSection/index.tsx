@@ -55,7 +55,7 @@ const BlogSection = ({ slice }: BlogSectionProps): JSX.Element => {
                         <p className="blog-title">{article.title}</p>
                         <p className="blog-date">{formattedDate}</p>
                       </div>
-                      <p className="blog-button"><span>Read More</span><Image className="blog-button-arrow" src={ArrowIconWhite} alt="Arrow Icon White"/></p>
+                      <p className="blog-button"><span>{article.label}</span><Image className="blog-button-arrow" src={ArrowIconWhite} alt="Arrow Icon White"/></p>
                     </div>
                     <PrismicNextImage className="blog-image" field={article.image}/>
                   </PrismicNextLink>
