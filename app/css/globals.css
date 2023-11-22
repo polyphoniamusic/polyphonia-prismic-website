@@ -467,7 +467,7 @@ header, .header {
 .header-nav-block {
     display: inline-flex;
     width: 100%;
-    border-radius: 2rem;
+    border-radius: 1.25rem;
     filter: invert(0%);
     transition: padding .2s ease-in-out,
                 background .2s ease-in-out,
@@ -610,7 +610,7 @@ header, .header {
 
 .header-nav-scrolled {
     padding: 20px var(--container-padding);
-    border-radius: 1.5rem;
+    border-radius: 1.25rem;
     transition: .2 all ease-in-out;
     background: var(--color-background);
     filter: invert(1);
@@ -1123,6 +1123,7 @@ header, .header {
     font-weight: 500;
     margin-right: 1rem;
     transition: all .1s ease-in-out;
+    word-break: break-word;
 }
 
 .showroll-name:hover {
@@ -2873,7 +2874,9 @@ footer {
 @media only screen and (max-width: 700px) {
     /* HEADER */
     .header-nav-scrolled {
-        border-radius: 1.5rem;
+        border-radius: 1.25rem;
+        /*padding: 15px var(--container-padding);*/
+        padding: 15px 20px;
     }
     /* SHOWROLL */
     .showroll-container {
@@ -2885,6 +2888,7 @@ footer {
     .showroll-name-block {
         animation: none;
         max-width: fit-content;
+        margin-right: unset;
     }
     .showroll-name-block div {
     
