@@ -2110,6 +2110,7 @@ header, .header {
     transition: all .5s ease-in-out;
     word-wrap: anywhere;
     display: inline-flex;
+    text-decoration: underline;
 }
 
 .contact-block-email:hover {
