@@ -6,6 +6,9 @@ import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import Image from 'next/image';
+
+import ScrollIconWhite from '@/app/content/images/icons/scroll-icon-white.svg';
 
 /**
  * Props for `Spotlight`.
@@ -127,6 +130,10 @@ const Spotlight = ({ slice }: SpotlightProps): JSX.Element => {
                 </div>
               </div>
             ))}
+            <div className="spotlight-scroll-instruction-block">
+              {/*<a className="spotlight-scroll-instruction">(Vertical Scroll Gallery)</a>*/}
+              <Image width="30" height="30" className="scroll-icon" alt="Scroll White Icon" src={ScrollIconWhite}/>
+            </div>
           </div>
       </div>
     </section>

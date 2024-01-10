@@ -347,6 +347,10 @@ li {
     /*filter: drop-shadow(0px 50px 0px var(--color-primary));*/
 }
 
+.scroll-icon {
+    width: 1.75rem;
+}
+
 .maxWidth1050 {
     display: none;
 }
@@ -884,6 +888,18 @@ header, .header {
     min-height: 100svh;
 }
 
+.spotlight-scroll-instruction-block {
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content: center; 
+    bottom: 4rem;
+    width: calc(100% - var(--container-padding));
+}
+
+.spotlight-scroll-instruction {
+}
+
 .spotlight-heading {
     font-size: 3.5rem;
     line-height: 3.5rem;
@@ -1101,7 +1117,7 @@ header, .header {
     width: max-content;
     transform: translateX(0%);
     margin-right: 100%;
-    animation: rollText 10s linear infinite;
+    animation: rollText 15s linear infinite;
     animation-delay: 1s;
     display: inline-flex;
 }
