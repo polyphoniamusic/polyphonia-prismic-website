@@ -893,7 +893,7 @@ header, .header {
     color: white;
     display: flex;
     justify-content: center; 
-    bottom: 3rem;
+    bottom: 2rem;
     width: calc(100% - var(--container-padding));
 }
 
