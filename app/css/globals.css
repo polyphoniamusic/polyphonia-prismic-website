@@ -892,8 +892,8 @@ header, .header {
     position: absolute;
     color: white;
     display: flex;
-    justify-content: center; 
-    bottom: 2rem;
+    justify-content: center;
+    bottom: 4rem;
     width: calc(100% - var(--container-padding));
 }
 
@@ -2954,6 +2954,9 @@ footer {
     .blog-grid-block-column {
         gap: 2rem;
         height: unset;
+    }
+    .spotlight-scroll-instruction-block {
+        bottom: 2rem;
     }
 }
 
