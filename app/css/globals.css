@@ -23,7 +23,7 @@
     --opacity-disabled: 0.4;
     --card-hover: grayscale(0) brightness(0.3);
 
-    --container-max-width: 1350px;
+    /*--container-max-width: 1350px;*/
     --container-padding: 3%;
     --section-padding: 6rem;
 
