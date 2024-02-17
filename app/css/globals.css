@@ -8,7 +8,7 @@
 :root {
     --color-primary: #FFFFFF;
     --color-secondary: #F50000;
-    --color-tertiary: #24FFB8;
+    --color-tertiary: #00ffcf; /* #24FFB8 */
     --color-quaternary: #c65cff;
     --color-quinary: #ff7f3f;
     --color-light-grey: #c0c0c0;
@@ -436,7 +436,7 @@ header, .header {
 }
 
 .header-container {
-    padding: var(--container-padding);
+    /*padding: var(--container-padding) 0;*/
     padding-bottom: 0;
     margin: auto;
     display: flex;
@@ -444,7 +444,7 @@ header, .header {
 }
 
 .header-container-mobile {
-    padding: var(--container-padding);
+    /*padding: var(--container-padding) 0;*/
     padding-bottom: 0;
     margin: auto;
     display: none;
@@ -471,12 +471,15 @@ header, .header {
 .header-nav-block {
     display: inline-flex;
     width: 100%;
-    border-radius: 1.25rem;
+    /*border-radius: 1.25rem;*/
     filter: invert(0%);
     transition: padding .2s ease-in-out,
                 background .2s ease-in-out,
                 filter .2s ease-in-out;
     transition-delay: .3s;
+    padding: var(--container-padding);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }
 
 .header-nav {
@@ -604,21 +607,24 @@ header, .header {
     opacity: 0;
     display: inline-flex;
     align-items: center;
-    border-radius: 1.5rem;
     filter: invert(0%);
     transition: padding .2s ease-in-out,
                 background .2s ease-in-out,
                 filter .2s ease-in-out;
     transition-delay: .3s;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: var(--container-padding);
 }
 
 .header-nav-scrolled {
-    padding: 20px var(--container-padding);
-    border-radius: 1.25rem;
+    /*border-radius: 1.25rem;*/
     transition: .2 all ease-in-out;
     background: var(--color-background);
-    filter: invert(1);
-    
+    /*filter: invert(1);*/  
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 2.5rem var(--container-padding);
 }
 
 .header-nav-mobile-button {
@@ -790,8 +796,8 @@ header, .header {
 }
 /* ---------- INTRODUCTION ---------- */
 .intro {
-    color: var(--color-background);
-    background: var(--color-primary);
+    color: var(--color-primary);
+    background: var(--color-background);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1085,8 +1091,8 @@ header, .header {
 
 /* ---------- SHOWROLL ---------- */
 .showroll {
-    color: var(--color-background);
-    background: var(--color-primary);
+    color: var(--color-primary);
+    background: var(--color-background);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1095,7 +1101,7 @@ header, .header {
 
 .showroll-container {
     max-width: var(--container-max-width);
-    padding: var(--section-padding) var(--container-padding);
+    padding: var(--section-padding) var(--container-padding) 0;
     justify-content: space-between;
     width: 100%;
     display: inline;
@@ -1143,7 +1149,7 @@ header, .header {
 }
 
 .showroll-name:hover {
-    color: var(--color-tertiary);
+    /*color: var(--color-quinary);*/
 }
 
 .showroll-name::after {
@@ -2891,9 +2897,9 @@ footer {
 @media only screen and (max-width: 700px) {
     /* HEADER */
     .header-nav-scrolled {
-        border-radius: 1.25rem;
         /*padding: 15px var(--container-padding);*/
-        padding: 15px 20px;
+        /*padding: 15px 20px;*/
+        padding: var(--container-padding) var(--container-padding);
     }
     /* SHOWROLL */
     .showroll-container {
