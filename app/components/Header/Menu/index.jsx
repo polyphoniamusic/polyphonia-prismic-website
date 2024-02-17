@@ -11,7 +11,7 @@ export default function index({ closeMenu, settings, locales }) {
 
   return (
     <motion.div className={styles.menu} variants={opacity} initial="initial" animate="enter" exit="exit">
-        <div className="header-container-mobile">
+        <div className="header-container-mobile header-container-mobile-opened">
           <div className="header-container-mobile-socials">
             <motion.div 
               variants={rotateX} 

@@ -452,6 +452,10 @@ header, .header {
     mix-blend-mode: difference;
 }
 
+.header-container-mobile-opened {
+    padding: var(--container-padding);
+}
+
 .header-container-mobile-socials div {
     display: flex;
     align-items: center;
@@ -2736,7 +2740,6 @@ footer {
     }   
     .header-container-mobile {
         align-items: start;
-        /*padding-top: calc(var(--container-padding)*1.5);*/
         display: flex;
         margin: 0;
         justify-content: space-between;
