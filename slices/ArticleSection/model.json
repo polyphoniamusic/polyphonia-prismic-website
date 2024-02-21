@@ -101,7 +101,24 @@
           }
         }
       },
-      "items": {}
+      "items": {
+        "text_content_paragraph": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text Content Paragraph",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "youtube_id": {
+          "type": "Text",
+          "config": {
+            "label": "Youtube ID",
+            "placeholder": ""
+          }
+        }
+      }
     }
   ]
 }

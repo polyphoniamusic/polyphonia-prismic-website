@@ -737,6 +737,31 @@ export interface ArticleSectionSliceDefaultPrimary {
 }
 
 /**
+ * Primary content in *ArticleSection → Items*
+ */
+export interface ArticleSectionSliceDefaultItem {
+  /**
+   * Text Content Paragraph field in *ArticleSection → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.items[].text_content_paragraph
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text_content_paragraph: prismic.RichTextField;
+
+  /**
+   * Youtube ID field in *ArticleSection → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.items[].youtube_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  youtube_id: prismic.KeyTextField;
+}
+
+/**
  * Default variation for ArticleSection Slice
  *
  * - **API ID**: `default`
@@ -746,7 +771,7 @@ export interface ArticleSectionSliceDefaultPrimary {
 export type ArticleSectionSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<ArticleSectionSliceDefaultPrimary>,
-  never
+  Simplify<ArticleSectionSliceDefaultItem>
 >;
 
 /**
@@ -2352,6 +2377,7 @@ declare module "@prismicio/client" {
       AllDocumentTypes,
       ArticleSectionSlice,
       ArticleSectionSliceDefaultPrimary,
+      ArticleSectionSliceDefaultItem,
       ArticleSectionSliceVariation,
       ArticleSectionSliceDefault,
       ArtistSectionSlice,

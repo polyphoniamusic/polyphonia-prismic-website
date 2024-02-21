@@ -1,7 +1,10 @@
+"use client";
+
 import { Content } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { format } from 'date-fns';
+import YouTubeLazyLoad from "@/app/components/YouTubeLazyLoad";
 
 /**
  * Props for `ArticleSection`.
@@ -52,10 +55,40 @@ const ArticleSection = ({ slice }: ArticleSectionProps): JSX.Element => {
                   <p className="article-paragraph">{children}</p>
                 )
               }}/>
-              <PrismicNextLink className="button-cta button-cta-white article-button" field={slice.primary.link}>{slice.primary.label}</PrismicNextLink>
+              {slice.primary.label ? (
+                <PrismicNextLink className="button-cta button-cta-white article-button" field={slice.primary.link}>
+                  {slice.primary.label}
+                </PrismicNextLink>) : (
+                  <></>
+                )}
+              
             </div>
-            
           </div>
+          {slice.items.map((item, index) => (
+            <div className="article-content">
+              {item.text_content_paragraph ? (
+                <PrismicRichText field={item.text_content_paragraph} components={{
+                  paragraph: ({children}) => (
+                    <div className="article-paragraph-block">
+                      <p className="article-paragraph">{children}</p>
+                    </div>
+                  )
+                }}/>
+                ) : (
+                <></>
+              )}
+              {item.youtube_id ? (
+                <div className="article-content-video-player">
+                  <YouTubeLazyLoad
+                    key={index} // Assurez-vous d'utiliser une clé unique pour chaque élément lors de la mise en boucle
+                    youtubeID={item.youtube_id}
+                  />
+                </div>
+                ) : (
+                <></>
+              )}
+            </div>
+          ))}
       </div>
     </section>
   );

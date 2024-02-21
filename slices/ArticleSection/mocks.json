@@ -90,6 +90,34 @@
 				"type": "Text"
 			}
 		},
-		"items": []
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"text_content_paragraph",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Labore minim est Lorem elit amet. Duis est velit duis Lorem voluptate labore est enim consequat."
+									}
+								}
+							]
+						}
+					],
+					[
+						"youtube_id",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "stock",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
 	}
 ]

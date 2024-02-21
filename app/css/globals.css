@@ -16,6 +16,7 @@
     --color-grey-dark: #515151;
     --color-disabled: #666666;
     --color-background: black;
+    --color-gradient-black: linear-gradient(to bottom, black 0%, #000000c9 25%, #00000024 65%, transparent 100%);
 
     --transparent-background: rgba(0, 0, 0, 0.9);
 
@@ -474,6 +475,7 @@ header, .header {
 
 .header-nav-block {
     display: inline-flex;
+    background: none;
     width: 100%;
     /*border-radius: 1.25rem;*/
     filter: invert(0%);
@@ -482,8 +484,8 @@ header, .header {
                 filter .2s ease-in-out;
     transition-delay: .3s;
     padding: var(--container-padding);
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    /*order-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;*/
 }
 
 .header-nav {
@@ -624,10 +626,10 @@ header, .header {
 .header-nav-scrolled {
     /*border-radius: 1.25rem;*/
     transition: .2 all ease-in-out;
-    background: var(--color-background);
+    background: var(--color-gradient-black);
     /*filter: invert(1);*/  
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    /*border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;*/
     padding: 2.5rem var(--container-padding);
 }
 
@@ -2254,12 +2256,12 @@ header, .header {
     justify-content: space-between;
     width: 100%;
     flex-direction: column;
+    gap: 3rem;
 }
 
 .article-information-block{
     display: flex;
     flex-direction: column;
-    margin-bottom: 3rem;
     gap: 2rem;
 }
 
@@ -2335,6 +2337,23 @@ header, .header {
     line-height: 2.5rem;
     text-transform: uppercase;
     font-family: var(--font-space-grotesk);
+}
+
+.article-content {
+    gap: 3rem;
+    display: grid;
+}
+
+.article-paragraph-block {
+    /*display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+    grid-gap: 2rem 1rem;*/
+}
+
+.article-content-video-player {
+    /*display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+    grid-gap: 2rem 1rem;*/
 }
 
 .article-paragraph {
