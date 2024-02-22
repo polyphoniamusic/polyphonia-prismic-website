@@ -1157,7 +1157,7 @@ header, .header {
 }
 
 .showroll-name:hover {
-    /*color: var(--color-quinary);*/
+    color: var(--color-tertiary);
 }
 
 .showroll-name::after {
