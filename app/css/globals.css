@@ -1634,6 +1634,7 @@ header, .header {
 .videos-player {
     width: 100%;
     aspect-ratio: 16/9;
+    /*max-height: 500px;*/
 }
 
 /* ---------- RELEASES ---------- */
@@ -2257,6 +2258,7 @@ header, .header {
     width: 100%;
     flex-direction: column;
     gap: 3rem;
+    max-width: 1800px;
 }
 
 .article-information-block{
@@ -2354,6 +2356,10 @@ header, .header {
     /*display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
     grid-gap: 2rem 1rem;*/
+}
+
+.article-content-video-player .videos-player {
+    max-height: 500px;
 }
 
 .article-paragraph {
