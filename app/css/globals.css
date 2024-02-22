@@ -885,6 +885,7 @@ header, .header {
     width: 100%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .spotlight-container {
@@ -894,7 +895,6 @@ header, .header {
     display: block;
     flex-direction: column;
     max-width: var(--container-max-width);
-    overflow: hidden;
 }
 
 .spotlight-container-block {
