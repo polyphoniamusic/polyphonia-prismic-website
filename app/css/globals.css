@@ -2177,9 +2177,11 @@ header, .header {
 }
 
 .blog-grid-container {
-    display: inline-flex;
     width: 100%;
     gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 100%;
 }
 
 .blog-grid-block {
