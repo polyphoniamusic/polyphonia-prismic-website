@@ -894,6 +894,7 @@ header, .header {
     display: block;
     flex-direction: column;
     max-width: var(--container-max-width);
+    overflow: hidden;
 }
 
 .spotlight-container-block {
