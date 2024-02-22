@@ -2313,7 +2313,7 @@ header, .header {
 .article-introduction {
     display: inline-flex;
     width: 100%;
-    gap: 2rem;
+    gap: var(--container-padding);
 }
 
 .article-introduction-block {
