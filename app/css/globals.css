@@ -24,7 +24,7 @@
     --opacity-disabled: 0.4;
     --card-hover: grayscale(0) brightness(0.3);
 
-    /*--container-max-width: 1350px;*/
+    --container-max-width: 1750px;
     --container-padding: 3%;
     --section-padding: 6rem;
 
@@ -486,6 +486,8 @@ header, .header {
     padding: var(--container-padding);
     /*order-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;*/
+    max-width: var(--container-max-width);
+    margin: auto;
 }
 
 .header-nav {
@@ -626,11 +628,9 @@ header, .header {
 .header-nav-scrolled {
     /*border-radius: 1.25rem;*/
     transition: .2 all ease-in-out;
-    background: var(--color-gradient-black);
     /*filter: invert(1);*/  
     /*border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;*/
-    padding: 2.5rem var(--container-padding);
 }
 
 .header-nav-mobile-button {
@@ -721,13 +721,14 @@ header, .header {
 
 .hero-container {
     max-width: var(--container-max-width);
-    margin: var(--container-padding);
     display: flex;
     /*flex-direction: column;*/
     justify-content: space-between;
     align-items: baseline;
     width: 100%;
     overflow: hidden;
+    margin: 0 auto;
+    padding: var(--container-padding);
 }
 
 .hero-logo {
@@ -817,8 +818,8 @@ header, .header {
     justify-content: space-between;
     width: 100%;
     flex-direction: column;
-    font-size: 3.25vw; /* 3rem */
-    line-height: 3.5vw; /* 3rem */
+    font-size: 3.25rem;
+    line-height: 3.5rem;
 }
 
 .intro-heading {
@@ -892,6 +893,7 @@ header, .header {
     padding: 0 0 0 var(--container-padding);
     display: block;
     flex-direction: column;
+    max-width: var(--container-max-width);
 }
 
 .spotlight-container-block {
@@ -1237,6 +1239,7 @@ header, .header {
     line-height: 3rem;
     display: block;
     flex-direction: column;
+    max-width: var(--container-max-width);
 }
 
 .artists-container-block {
@@ -1442,7 +1445,6 @@ header, .header {
 }
 
 .artist-container {
-    max-width: var(--container-max-width);
     padding-top: calc(var(--section-padding));
     color: var(--color-primary);
     display: flex;
@@ -1496,6 +1498,8 @@ header, .header {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    max-width: var(--container-max-width);
+    margin: auto;
 }
 
 .artist-category {
@@ -1613,6 +1617,8 @@ header, .header {
     line-height: 3rem;
     display: block;
     flex-direction: column;
+    max-width: var(--container-max-width);
+    margin: auto;
 }
 
 .videos-heading {
@@ -1648,6 +1654,8 @@ header, .header {
 
 .releases-container {
     width: 100%;
+    max-width: var(--container-max-width);
+    margin: auto;
     display: inline-flex;
     padding: var(--section-padding) var(--container-padding);
     font-size: 3.5rem;
@@ -2252,7 +2260,6 @@ header, .header {
 }
 
 .article-container {
-    max-width: var(--container-max-width);
     padding: var(--section-padding) var(--container-padding);
     color: var(--color-primary);
     display: flex;
@@ -2260,7 +2267,7 @@ header, .header {
     width: 100%;
     flex-direction: column;
     gap: 3rem;
-    max-width: 1800px;
+    max-width: var(--container-max-width);
 }
 
 .article-information-block{
