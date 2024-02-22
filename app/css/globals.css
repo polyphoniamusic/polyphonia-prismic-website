@@ -898,7 +898,7 @@ header, .header {
 
 .spotlight-container-block {
     display: flex;
-    overflow: hidden;
+    /*overflow: hidden;*/
     min-height: 100svh;
 }
 
