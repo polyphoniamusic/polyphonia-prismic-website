@@ -45,18 +45,19 @@
             "thumbnails": []
           }
         },
-        "link": {
-          "type": "Link",
-          "config": {
-            "label": "Link",
-            "select": "document"
-          }
-        },
         "label": {
           "type": "Text",
           "config": {
             "label": "Label",
             "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
           }
         }
       }

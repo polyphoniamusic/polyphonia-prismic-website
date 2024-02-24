@@ -1063,12 +1063,12 @@ export interface ArtistsSectionSliceDefaultItem {
   /**
    * Page Link field in *ArtistsSection → Items*
    *
-   * - **Field Type**: Content Relationship
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: artists_section.items[].page_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  page_link: prismic.ContentRelationshipField;
+  page_link: prismic.LinkField;
 }
 
 /**
@@ -1223,16 +1223,6 @@ export interface BlogSectionSliceDefaultItem {
   image: prismic.ImageField<never>;
 
   /**
-   * Link field in *BlogSection → Items*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blog_section.items[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.ContentRelationshipField;
-
-  /**
    * Label field in *BlogSection → Items*
    *
    * - **Field Type**: Text
@@ -1241,6 +1231,16 @@ export interface BlogSectionSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   label: prismic.KeyTextField;
+
+  /**
+   * Link field in *BlogSection → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_section.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
 }
 
 /**
