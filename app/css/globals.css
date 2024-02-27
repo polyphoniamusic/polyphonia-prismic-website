@@ -471,6 +471,8 @@ header, .header {
 
 .header-logo-block {
     margin-right: 4rem;
+    display: flex;
+    align-items: center;
 }
 
 .header-nav-block {

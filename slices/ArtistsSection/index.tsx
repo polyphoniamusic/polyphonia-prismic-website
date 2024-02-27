@@ -26,7 +26,7 @@ const ArtistsSection = ({ slice }: ArtistsSectionProps): JSX.Element => {
           {slice.items.map(({artist_image, artist_type, artist_name, page_link, label}) => (
             <div className="artists-block">
                 <PrismicNextLink field={page_link} className="artists-block-image-container">
-                  <PrismicNextImage field={artist_image} className="artists-cover" />
+                  <PrismicNextImage field={artist_image} className="artists-cover"  />
                   <div className="artists-block-image-recover">
                     <PrismicRichText field={label} components={{
                       paragraph: ({children}) =>(
