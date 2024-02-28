@@ -341,7 +341,7 @@ li {
     transform: translateY(60px) rotate(45deg);
     transition: 0.2s all ease-in-out;
     transition-delay: 0s;
-    transition-delay: 0.15s;
+    /*transition-delay: 0.15s;*/
     margin-left: 0.5rem;
     float: right;
     height: 1.25rem;
@@ -556,20 +556,20 @@ header, .header {
 }
 
 .header-nav-button > div a {
-    text-shadow: 0 50px var(--color-primary);
-    padding-top: 50px;
+    /*text-shadow: 0 50px var(--color-primary);*/
+    /*padding-top: 50px;
     padding-bottom: 50px;
-    margin-top: 0px;
-    transition: 0.3s ease-in-out;
-    transform: translateY(-50px);
+    margin-top: 0px;*/
+    /*transition: 0.3s ease-in-out;*/
+    /*transform: translateY(-50px);*/
     display: inline-block;
     text-decoration: none;
     /*font-family: var(--font-space-grotesk);*/
 }
   
 .header-nav-button > div a:hover {
-    margin-top: -50px;
-    text-shadow: 0 50px var(--color-primary);
+    /*margin-top: -50px;*/
+    /*text-shadow: 0 50px var(--color-primary);*/
 }
 
 .header-nav-button > div a:hover .header {
@@ -590,7 +590,7 @@ header, .header {
     padding-top: 50px;
     padding-bottom: 50px;
     margin-top: 0px;
-    transition: 0.3s ease-in-out;
+    /*transition: 0.3s ease-in-out;*/
     transform: translateY(-50px);
     display: inline-block;
     text-decoration: none;
@@ -607,6 +607,10 @@ header, .header {
 
 .header-nav-socials img {
     width: 1.75rem;
+}
+
+.header-nav-button > div a:hover .arrow {
+    transform: translateY(0) rotate(45deg);
 }
 
 .header-nav-mobile {
