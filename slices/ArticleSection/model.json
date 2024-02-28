@@ -76,6 +76,13 @@
             "thumbnails": []
           }
         },
+        "credits": {
+          "type": "Text",
+          "config": {
+            "label": "Credits",
+            "placeholder": ""
+          }
+        },
         "text_content": {
           "type": "StructuredText",
           "config": {

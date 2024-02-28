@@ -88,6 +88,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "thou",
 				"type": "Text"
+			},
+			"credits": {
+				"__TYPE__": "FieldContent",
+				"value": "closely",
+				"type": "Text"
 			}
 		},
 		"items": [

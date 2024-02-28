@@ -706,6 +706,16 @@ export interface ArticleSectionSliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
+   * Credits field in *ArticleSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.primary.credits
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  credits: prismic.KeyTextField;
+
+  /**
    * Text Content field in *ArticleSection → Primary*
    *
    * - **Field Type**: Rich Text

@@ -2333,8 +2333,13 @@ header, .header {
 .article-introduction-block {
     display: flex;
     flex-direction: column;
+    align-items: end;
     gap: 2rem;
     width: 50%;
+}
+
+.article-introduction-block:first-of-type {
+    flex-direction: initial;
 }
 
 .article-image {
@@ -2342,6 +2347,17 @@ header, .header {
     /*width: 100%;*/
     aspect-ratio: 16/9;
     height: 100%;
+}
+
+.article-credits {
+    position: absolute;
+    color: var(--color-background);
+    padding: 0.25rem 0.5rem;
+    /*background: var(--color-primary);*/
+    font-size: 0.8rem;
+    align-items: end;
+    display: flex;
+    backdrop-filter: blur(10px);
 }
 
 .article-subheading {
