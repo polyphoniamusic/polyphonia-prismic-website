@@ -2412,9 +2412,8 @@ header, .header {
 
 .article-image-comp {
     object-fit: cover;
-    height: 500px;
+    max-width: 500px;
     width: 100%;
-    aspect-ratio: 16/9;
 }
 
 .article-credits-comp {
