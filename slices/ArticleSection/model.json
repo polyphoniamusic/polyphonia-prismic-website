@@ -124,6 +124,21 @@
             "label": "Youtube ID",
             "placeholder": ""
           }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image_credits": {
+          "type": "Text",
+          "config": {
+            "label": "Image Credits",
+            "placeholder": ""
+          }
         }
       }
     }

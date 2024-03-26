@@ -2399,6 +2399,37 @@ header, .header {
 }
 
 
+.article-image-comp-block {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
+    width: 100%;
+    flex-direction: initial;
+    margin: auto;
+}   
+
+
+.article-image-comp {
+    object-fit: cover;
+    height: 500px;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.article-credits-comp {
+    position: absolute;
+    color: var(--color-background);
+    padding: 0.25rem 0.5rem;
+    /*background: var(--color-primary);*/
+    font-size: 0.8rem;
+    align-items: end;
+    display: flex;
+    backdrop-filter: blur(10px);
+    background: #ffffff30;
+}
+
+
 /* ---------- PRIVACY ---------- */
 .privacy {
     color: var(--color-background);

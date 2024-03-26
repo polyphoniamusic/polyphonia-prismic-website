@@ -769,6 +769,26 @@ export interface ArticleSectionSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   youtube_id: prismic.KeyTextField;
+
+  /**
+   * Image field in *ArticleSection → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Image Credits field in *ArticleSection → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article_section.items[].image_credits
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  image_credits: prismic.KeyTextField;
 }
 
 /**

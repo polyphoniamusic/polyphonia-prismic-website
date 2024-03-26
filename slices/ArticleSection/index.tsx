@@ -88,6 +88,17 @@ const ArticleSection = ({ slice }: ArticleSectionProps): JSX.Element => {
                 ) : (
                 <></>
               )}
+              {item.image ? (
+                <div className="article-image-comp-block">
+                  <PrismicNextImage field={item.image} className="article-image-comp"/>
+                  {item.image_credits ? (
+                    <span className="article-credits-comp">{item.image_credits}</span>) : (
+                    <></>
+                  )}
+                </div>
+                ) : (
+                <></>
+              )}
             </div>
           ))}
       </div>
